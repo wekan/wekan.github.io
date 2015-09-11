@@ -1,0 +1,83 @@
+body {
+  font-family: 'Droid Sans', sans-serif;
+  color: #B0BED1;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s, border 0.2s;
+}
+
+a:hover {
+  color: #004F6D;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: auto;
+}
+
+nav {
+  margin: 0;
+  padding: 20px 0 15px;
+  font-weight: 400;
+  text-align: center;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.brand {
+  margin: 92px auto 32px;
+  width: 474px;
+}
+
+.brand .sub-title {
+  font-size: 0.7em;
+  margin-top: 35px;
+  font-weight: 400;
+}
+
+.action-buttons {
+  margin: 50px 0 150px;
+}
+
+.action-buttons .button {
+  padding: 12px;
+  border: 2px solid #F2F2F2;
+  margin: 0 5px;
+  border-radius: 3px;
+  font-size: 1.1em;
+}
+
+.action-buttons .button:hover {
+  border-color: #004F6D;
+}
+
+.action-buttons .button .version-number {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 0.7em;
+}
+
+.screenshot-banner {
+  height: 435px;
+  margin: 0;
+  padding: 0 7%;
+  background-color: #ECECEC;
+}
+
+.screenshot-banner img {
+  position: relative;
+  top: -71px;
+  max-width: 100%;
+}
+
