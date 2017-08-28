@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  overflow: hidden;
 }
 
 a {
@@ -17,14 +16,14 @@ a:hover {
   color: #004F6D;
 }
 
-.wrapper {
+footer {
   max-width: 1024px;
   margin: auto;
 }
 
 nav {
   margin: 0;
-  padding: 20px 0 15px;
+  padding: 10px 0 40px;
   font-weight: 400;
   text-align: center;
   border-bottom: 1px solid #F2F2F2;
@@ -33,10 +32,11 @@ nav {
 nav a {
   display: inline-block;
   margin: 0 20px;
+  line-height: 2em;
 }
 
 .brand {
-  margin: 92px auto 32px;
+  margin: 40px auto 32px;
   width: 474px;
 }
 
@@ -47,7 +47,7 @@ nav a {
 }
 
 .action-buttons {
-  margin: 50px 0 150px;
+  margin: 0 0 120px;
 }
 
 .action-buttons .button {
@@ -56,6 +56,8 @@ nav a {
   margin: 0 5px;
   border-radius: 3px;
   font-size: 1.1em;
+  line-height: 3.5em;
+  white-space: nowrap;
 }
 
 .action-buttons .button:hover {
@@ -69,15 +71,15 @@ nav a {
 }
 
 .screenshot-banner {
-  height: 435px;
-  margin: 0;
+  margin-bottom: 100px;
   padding: 0 7%;
   background-color: #ECECEC;
 }
 
 .screenshot-banner img {
   position: relative;
-  top: -71px;
+  margin-top: -71px;
   max-width: 100%;
+  margin-bottom: -71px;
 }
 
