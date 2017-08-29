@@ -16,14 +16,14 @@ a:hover {
   color: #004F6D;
 }
 
-footer {
+header {
   max-width: 1024px;
   margin: auto;
 }
 
 nav {
   margin: 0;
-  padding: 10px 0 40px;
+  padding: 15px 0 10px;
   font-weight: 400;
   text-align: center;
   border-bottom: 1px solid #F2F2F2;
@@ -33,11 +33,18 @@ nav a {
   display: inline-block;
   margin: 0 20px;
   line-height: 2em;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #e5e5e5;
 }
 
 .brand {
-  margin: 40px auto 32px;
-  width: 474px;
+  margin: 50px auto 32px;
+  max-width: 474px;
+}
+
+.brand img {
+  width: 70%;
 }
 
 .brand .sub-title {
@@ -71,7 +78,7 @@ nav a {
 }
 
 .screenshot-banner {
-  margin-bottom: 100px;
+  margin-bottom: 200px;
   padding: 0 7%;
   background-color: #ECECEC;
 }
