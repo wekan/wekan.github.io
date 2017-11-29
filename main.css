@@ -38,17 +38,17 @@ nav a {
 }
 
 .brand {
-  margin: 50px auto 32px;
+  margin: 20px auto 32px;
   max-width: 474px;
 }
 
 .brand img {
-  width: 70%;
+  width: 100%;
 }
 
 .brand .sub-title {
   font-size: 0.7em;
-  margin-top: 35px;
+  margin-top: 0px;
   font-weight: 400;
 }
 
