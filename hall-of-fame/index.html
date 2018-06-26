@@ -54,7 +54,7 @@ Hi, I just found a security issue in Wekan:
   <li>sessions can be taken over</li>
 </ul>
 
-<b>Reproduction:</b>
+<b>Reproduction</b>
 
 <ol>
   <li>navigate to any standalone wekan instance (sign in page, public board, ...)</li>
@@ -66,7 +66,7 @@ Hi, I just found a security issue in Wekan:
   <li>reload the page => logged in as the user you have the logintoken from...</li>
 </ol>
 
-<b>Problems:</b>
+<b>Problems</b>
 
 <ul>
   <li>the "people" publication (in 'server/publications/people.js') is not secured against access (should only be accessible by admins)</li>
@@ -74,9 +74,10 @@ Hi, I just found a security issue in Wekan:
   <li>I think this problem exists since the introduction of the admin panel</li>
 </ul>
 
-<b>Solution:</b>
+<b>Solution</b><br /><br />
 
-This can be solved by improving the "people" publication. Some proposal:
+This can be solved by improving the "people" publication.<br />
+Some proposal:
 
 <pre>
 Meteor.publish('people', function(limit) {
