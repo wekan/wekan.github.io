@@ -47,6 +47,65 @@
       <hr>
        <b>2018-06-13 01:30 GMT+3</b><br />Wekan v1.04 released, includes security fix.
       <hr>
+       <b>2018-06-26 16:07 GMT+3</b><br />Report content:<br /><br />
+Hi, I just found a security issue in Wekan:
+<ul>
+  <li>user data is published unconditionally</li>
+  <li>sessions can be taken over</li>
+</ul>
+
+<b>Reproduction:</b>
+
+<ol>
+  <li>navigate to any standalone wekan instance (sign in page, public board, ...)</li>
+  <li>open developer tools (in chrome)</li>
+  <li>in console: "Meteor.subscribe('people', 999)"</li>
+  <li>Users.find().fetch() => all users are shown</li>
+  <li>have a look at the users: there are all login tokens in the results (under services)!</li>
+  <li>In console: "localStorage.setItem('Meteor.loginToken', 'anylogintokenfromthelistyouwouldliketouse')"</li>
+  <li>reload the page => logged in as the user you have the logintoken from...</li>
+</ol>
+
+<b>Problems:</b>
+
+<ul>
+  <li>the "people" publication (in 'server/publications/people.js') is not secured against access (should only be accessible by admins)</li>
+  <li>in general, only some fields of a user should be published (no need to publish the password or login tokens...)</li>
+  <li>I think this problem exists since the introduction of the admin panel</li>
+</ul>
+
+<b>Solution:</b>
+
+This can be solved by improving the "people" publication. Some proposal:
+
+<pre>
+Meteor.publish('people', function(limit) {
+  check(limit, Number);
+
+  if (!Match.test(this.userId, String)) {
+    return [];
+  }
+
+  const user = Users.findOne(this.userId);
+  if (user && user.isAdmin) {
+    return Users.find({}, {
+      limit,
+      sort: {createdAt: -1},
+      fields: {
+        'username': 1,
+        'profile.fullname': 1,
+        'isAdmin': 1,
+        'emails': 1,
+        'createdAt': 1,
+        'loginDisabled': 1,
+      },
+    });
+  } else {
+    return [];
+  }
+});
+</pre>
+
     </td>
 
   </tr>
