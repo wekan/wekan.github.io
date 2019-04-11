@@ -82,7 +82,7 @@ nav a {
 }
 
 .screenshot-banner1 {
-  margin-bottom: 30px;
+  margin-bottom: 100px;
   padding: 0 7%;
   background-color: #ECECEC;
 }
@@ -94,6 +94,14 @@ nav a {
 }
 
 .screenshot-banner img {
+  position: relative;
+  margin-top: -71px;
+  max-width: 100%;
+  margin-bottom: -71px;
+}
+
+
+.screenshot-banner1 img {
   position: relative;
   margin-top: -71px;
   max-width: 100%;
