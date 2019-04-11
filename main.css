@@ -38,8 +38,13 @@ nav a {
 }
 
 .brand {
-  margin: 20px auto 32px;
+  margin: 0px auto 0px;
   max-width: 474px;
+}
+
+.brandtext {
+  margin: 20px auto 0px;
+  max-width: 474 px;
 }
 
 .brand img {
@@ -53,7 +58,7 @@ nav a {
 }
 
 .action-buttons {
-  margin: 0 0 120px;
+  margin: 0 0 60px;
 }
 
 .action-buttons .button {
@@ -74,6 +79,12 @@ nav a {
   display: inline-block;
   margin-left: 4px;
   font-size: 0.7em;
+}
+
+.screenshot-banner1 {
+  margin-bottom: 30px;
+  padding: 0 7%;
+  background-color: #ECECEC;
 }
 
 .screenshot-banner {
