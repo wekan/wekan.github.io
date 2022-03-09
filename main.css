@@ -1,6 +1,5 @@
 body {
   font-family: sans-serif;
-  color: #B0BED1;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -67,7 +66,7 @@ nav a {
 
 .action-buttons .button {
   padding: 12px;
-  border: 2px solid #F2F2F2;
+  border: 2px solid #004F6D;
   margin: 0 5px;
   border-radius: 3px;
   font-size: 1.1em;
@@ -76,7 +75,8 @@ nav a {
 }
 
 .action-buttons .button:hover {
-  border-color: #004F6D;
+  background-color: #EEE;
+  border-color: green;
 }
 
 .action-buttons .button .version-number {
