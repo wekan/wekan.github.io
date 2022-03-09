@@ -64,6 +64,20 @@ nav a {
   margin: 0 0 60px;
 }
 
+.powered-by table {
+  text-align: center;
+}
+
+.powered-by td {
+  border: 0;
+  padding: 20px;
+  spacing: 0;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  vertial-align: middle;
+}
+
 .action-buttons .button {
   padding: 12px;
   border: 2px solid #004F6D;
@@ -117,7 +131,7 @@ nav a {
   background-color: #fff;
 }
 
-table {
+.hof table {
   border-collapse: collapse;
   margin-left: 5%;
   width: 90%;
@@ -126,7 +140,7 @@ table {
   border-collapse: collapse;
 }
 
-td, th {
+.hof td, th {
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -136,7 +150,7 @@ td, th {
   padding: 8px;
 }
 
-th a {
+.hof th a {
   color: #165ccc;
   text-decoration: underline;
 }
@@ -149,24 +163,24 @@ th a:hover {
 }
 */ 
 
-tr a {
+.hof tr a {
   color: #165ccc;
   text-decoration: underline;
 }
 
-tr a:hover {
+.hof tr a:hover {
   color: #fff;
   background-color: #165ccc;
   text-decoration: underline;
 }
 
-tr:nth-child(even){background-color: #f2f2f2;}
+.hof tr:nth-child(even){background-color: #f2f2f2;}
 
 /*
 tr:hover {background-color: #ddd;}
 */
 
-th {
+.hof th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
