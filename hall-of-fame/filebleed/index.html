@@ -139,11 +139,9 @@ The following steps are necessary to exploit the vulnerability:
 5. If there is no attachment in the card, upload one
 6. Click on "Attachment Actions" under the attachment and select "Rename"
 7. Include arbitrary XSS payload such as the following inside the filename:
-</pre>
 
-%22%3Cscript%3Ealert%28%27Stored%20XSS%27%29%3C%2Fscript%3E%22
+"[script]alert('Stored XSS')[/script]" (where change [] to open close tags)
 
-</pre>
 8. Select "Save" to embed the XSS payload
 
 Any user with access to the board clicking on the attachment preview
