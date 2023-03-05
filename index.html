@@ -1,309 +1,437 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WeKan ® — Open-Source kanban</title>
+
     <link rel="icon" href="/wekan-favicon.png">
-    <link rel="shortcut icon" href="/wekan-favicon.png">
-    <link rel="apple-touch-icon" href="/wekan-favicon.png">
-    <link rel="mask-icon" href="/wekan-150.svg">
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="shortcut icon" href="https://wekan.github.io//wekan-favicon.png">
+    <link rel="apple-touch-icon" href="https://wekan.github.io//wekan-favicon.png">
+    <link rel="mask-icon" href="https://wekan.github.io//wekan-150.svg">
     <link rel="alternate" type="application/atom+xml" title="RSS Feed for WeKan ® ChangeLog" href="https://github.com/wekan/wekan/releases.atom" />
-  </head>
-  <body>
 
-<!--
-    <header>
-      <nav>
-        <a href=""></a>
-      </nav>
+
+    <!-- Bootstrape framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Use same styles as Wekan board -->
+    <style>
+        body {
+            font: 16px Roboto,Poppins,Helvetica Neue,Arial,Helvetica,sans-serif;
+            background: #dedede;
+        }
+
+        p {
+            font: 14px Roboto,Poppins,Helvetica Neue,Arial,Helvetica,sans-serif;
+        }
+
+        .wekan-light-blue {
+            background: #2980b9;
+        }
+
+        .wekan-dark-blue {
+            background: #2573a7;
+        }
+
+        .wekan-grey {
+            background: #dedede;
+        }
+
+        .nav-masthead .nav-link {
+            color: rgba(255, 255, 255, .5);
+            border-bottom: .25rem solid transparent;
+        }
+
+        .nav-masthead .nav-link:hover,
+        .nav-masthead .nav-link:focus {
+            border-bottom-color: rgba(255, 255, 255, .25);
+        }
+
+        .nav-masthead .nav-link + .nav-link {
+            margin-left: 1rem;
+        }
+
+        .nav-masthead .active {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+<a name="home"></a>
+<div class="container-fluid wekan-dark-blue">
+    <header class="container mb-auto site-header py-1">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="mb-3 mt-3">
+                    <a class="navbar-brand" href="/"><img src="wekan-logo-bw.png" alt="WeKan ®" height="60px" />&nbsp;</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <nav class="nav nav-masthead justify-content-center float-md-start">
+                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#home">Home</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="#download">Download</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="#security">Security</a>
+                    <a class="nav-link fw-bold py-1 px-0" href="#features">Features</a>
+                </nav>
+            </div>
+        </div>
     </header>
--->
+</div>
 
-    <h1 class="brand">
-      <img src="wekan-logo.svg" alt="WeKan ®" />
-      <span class="sub-title"><em>Open-Source</em> kanban. WeKan ® is
-        <a href="https://www.tmdn.org/tmview/#/tmview/detail/FI50202100052006A" style="color: green;">registered trademark in Finland</a>.
-        Other countries usually honor trademarks of one country.
-      </span>
-      <br />
-      <br />
-      <br />
-    </h1>
-
-    <div class="screenshot-banner1">
-      <img src="wekan-markdown.png" alt="WeKan ® Screenshot" />
+<a name="features"></a>
+<div class="container-fluid wekan-light-blue">
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="https://wekan.github.io/wekan-dark-mode.png" class="d-block mx-lg-auto img-fluid" alt="Wekan" width="700" height="500" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3 text-white">WeKan ®<br> Open-Source Kanban</h1>
+                <p class="lead text-white">Experience efficient task management with Wekan - the open-source, customizable, and privacy-focused alternative to Trello, Asana, Monday.com, Jira, Basecamp and others.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="#download" class="btn btn-dark btn-lg px-4 me-md-2">Download</a>
+                    <a href="https://wekan.team/commercial-support/" class="btn btn-link btn-lg px-4 text-white">Commercial support</a>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <br />
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="fw-bold">Features in Wekan</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                <i class="bi bi-kanban"></i>
+            </div>
 
-<hr>
+            <h3 class="fs-2">Boards</h3>
+            <p>
+                You can make many boards for different projects or tasks. Each board can have columns to show the different stages of your work, such as "To Do," "Doing," and "Done." You can also add cards to each board to represent tasks, with titles, descriptions, and due dates. Wekan helps you keep track of your tasks and projects visually, so you can see what needs to be done and what has been completed.
+            </p>
 
-    <div class="action-buttons">
-      <a class="button" style="color: green;" href="https://github.com/wekan/wekan/blob/master/SECURITY.md">Security</a>
-      <a class="button" href="https://github.com/wekan/wekan/issues/4233">WeKan is NOT vulnerable to log4j</a>
-      <a class="button" href="https://wekan.github.io/hall-of-fame">CVE Hall of Fame</a>
-      <br />
-      <br />
+        </div>
 
-      Often used
-      <a class="button" style="color: green;" href="https://github.com/wekan/wekan/issues">Feature Requests and Bugs</a>
-      <a class="button" href="https://wekan.team/commercial-support/">Commercial Support</a>
-      <a class="button" style="color: green;" href="https://github.com/wekan/wekan/blob/master/CHANGELOG.md">ChangeLog</a>
-      <a class="button" href="https://github.com/wekan/wekan/releases.atom"><img src="feed-icon.svg" width="20px" height="20px" alt="RSS Feed for Wekan ChangeLog"></a>
-      <a class="button" href="https://github.com/wekan/wekan/wiki">Docs</a>
-      <a class="button" style="color: green;" href="https://github.com/wekan/wekan/wiki/Scaling">Scaling</a>
-      <a class="button" href="https://github.com/wekan/wekan/wiki/New-card-with-Python3-and-REST-API">API</a>
-      <a class="button" href="https://www.transifex.com/wekan/wekan">Translations</a>
-      <a class="button" href="https://boards.wekan.team/b/D2SzJKZDS4Z48yeQH/wekan-open-source-kanban-board-with-mit-license">Roadmap (read-only)</a>
-      <a class="button" href="https://blog.wekan.team/2020/06/maximum-transparency/">Transparency</a>
-      <a class="button" href="https://blog.wekan.team">Blog</a>
-      <a class="button" href="https://sivut.sandcats.io/shared/1uLGMa6ThGdSFsDKBieimkmo0Fbh5fv0g1b_7nUI1RG">Accessibility Survey 2021-12-07</a>
-      <a class="button" href="https://sivut.sandcats.io/shared/XKdXvzeSVV9Qq1t_-aJM5N2god_zooTU-mhD92RYk2O">Saavutettavuus kysely 7.12.2021</a>
-      <br />
-      <br />
+        <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                <i class="bi bi-list"></i>
+            </div>
+            <h3 class="fs-2">Lists</h3>
+            <p>
+                Wekan uses lists on a Kanban board to represent different stages of a workflow, such as "To Do," "Doing," and "Done." Lists help you organize and track tasks on the board. To add a new list, click "Add a list" and give it a name. You can move tasks between lists by dragging and dropping them. Lists can be customized by changing their color or adding custom fields to capture more information about tasks.
+            </p>
+        </div>
 
-      Sometimes used
-      <a class="button" href="https://github.com/wekan/wekan/wiki/IRC-FAQ">IRC</a>
-      <a class="button" href="https://github.com/wekan/wekan/discussions">GitHub Discussions</a>
-      <a class="button" href="https://gitter.im/wekan/wekan">Gitter</a>
-      <a class="button" href="https://twitter.com/WeKanTeam">Twitter</a>
-      <a class="button" href="https://www.reddit.com/r/wekanteam/">Reddit</a>
-      <a class="button" href="https://www.facebook.com/wekanteam">Facebook</a>
-      <a class="button" href="https://discord.gg/n2Va77qu">Discord</a>
-      <a class="button" href="https://www.instagram.com/wekanteam/">Instagram</a>
-      <a class="button" href="https://community.vanila.io/wekan">Vanila Community</a>
-      <a class="button" href="https://chat.vanila.io/channel/wekan">Vanila RocketChat</a>
-      <br />
-      <br />
+        <div class="feature col">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                <i class="bi bi-card-heading"></i>
+            </div>
+            <h3 class="fs-2">Cards</h3>
+            <p>
+                A card represents a task on a Kanban board. It includes a title, description, due date, labels, and comments. To create a new card, choose the board and column, and add the relevant details. As work progresses, move the card from one column to another. Cards can be customized by adding labels, files, and checklists. You can also comment on cards to provide updates or feedback.
+            </p>
+
+        </div>
+
     </div>
+</div>
 
-<hr>
+<a name="security"></a>
+<div class="container-fluid bg-white">
+    <div class="container px-4 py-5">
 
-    <h1 class="brand">
-      <span class="sub-title">Client: Javascript enabled mobile or desktop webbrowser or App
-      </span>
-    </h1>
+        <div class="row row-cols-1 row-cols-md-2 align-items-md-top g-5 py-5">
+            <div class="d-flex flex-column align-items-start gap-2">
+                <h3 class="fw-bold">Security in focus</h3>
+                <p class="text-muted">Wekan takes data security very seriously and has implemented several measures to protect your data. Here are some reasons why Wekan is more secure and better protects your data than some competitors</p>
+                <p class="text-muted">Compared to other kanban boards, one of the biggest advantages of Wekan is its self-hosting option, which gives users more control over their data, better security, greater customization options, cost-effectiveness, and long-term viability.</p>
+                <a href="https://github.com/wekan/wekan/blob/master/SECURITY.md" class="btn btn-outline-primary btn-lg">More about security</a>
+                <a href="https://wekan.github.io/hall-of-fame" class="btn btn-link btn-lg">CVE Hall of Fame</a>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 g-4">
+                <div class="d-flex flex-column gap-2">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-left fs-4 rounded-3">
+                        <i class="bi bi-file-binary"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-0">Open Source software</h4>
+                    <p class="text-muted">Wekan is an open-source project, which means that its source code is available for anyone to inspect and audit for security vulnerabilities. This makes it less likely that there are hidden security holes that could be exploited by attackers.</p>
+                </div>
 
-    <div class="action-buttons">
-      <a class="button" href="https://github.com/wekan/wekan/wiki/PWA" style="color: green;">Creating Mobile and Desktop App icons of your WeKan ® Server</a>
-      <a class="button" href="https://github.com/wekan/wekan/wiki/Browser-compatibility-matrix">Mobile Apps and compatible webbrowsers</a>
-      <a class="button" href="https://github.com/wekan/wekan/wiki/Touch-Screen-support" style="color: green;">Enable All Touch Screen Support</a>
+                <div class="d-flex flex-column gap-2">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-left fs-4 rounded-3">
+                        <i class="bi bi-hdd-network"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-0">Self-hosted option</h4>
+                    <p class="text-muted">Wekan offers a self-hosted option, which allows you to run the software on your own servers. This gives you full control over your data and can help you ensure that your data is not being accessed or shared without your knowledge.</p>
+                </div>
+
+                <div class="d-flex flex-column gap-2">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-left fs-4 rounded-3">
+                        <i class="bi bi-lock"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-0">Access controls</h4>
+                    <p class="text-muted">Wekan allows you to set up access controls to limit who can see and edit your boards and cards. You can set permissions at the board level or for individual users, which helps you control who has access to sensitive data.</p>
+                </div>
+
+                <div class="d-flex flex-column gap-2">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-left fs-4 rounded-3">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h4 class="fw-semibold mb-0">Security</h4>
+                    <p class="text-muted">Wekan is designed with security in mind, and its features and options are built to help you protect your data and keep it secure.</p>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-<hr>
+<a name="download"></a>
+<div class="container-fluid">
+    <div class="container px-4 py-5">
+        <h2 class="fw-bold">Download Wekan</h2>
+        <div class="action-buttons">
 
-    <h1 class="brand">
-      <span class="sub-title">Download Server: WeKan ® <span class="version-number">v6.78</span>, Meteor 2.10.0, Node.js 14.21.3, MongoDB 5.0.14
-      </span>
-    </h1>
+            <h3>Standalone WeKan ®</h3>
 
-    <div class="action-buttons">
-
-     <h1>Standalone WeKan ®</h1>
-
-         Docker/VM
-           <a class="button" href="https://github.com/wekan/wekan/wiki/UCS">VM +integrated IdM (UCS)</a>
-           <a class="button" href="https://artifacthub.io/packages/helm/wekan/wekan">Kubernetes (Helm Chart)</a>
-           <a class="button" href="https://github.com/wekan/wekan/issues/3874#issuecomment-867526249">Upgrading Docker</a>
-           <a class="button" href="https://github.com/wekan/wekan/wiki/Docker">Docker amd64</a>
-           <a class="button" href="https://github.com/wekan/wekan/wiki/Cloudron">Cloudron</a>
-           <a class="button" href="https://github.com/wekan/wekan/wiki/Oracle-Identity-Cloud">Oracle Identity Cloud</a>
-           <a class="button" href="https://github.com/wekan/wekan/wiki/OpenShift">OpenShift</a>
-           <a class="button" href="https://github.com/wekan/wekan/wiki/PikaPods">PikaPods</a>
-           <a class="button" href="https://github.com/wekan/wekan/wiki/Platforms#production-saas-wekan-ready-paid-services-just-start-using">SaaS</a>
-           <a class="button" href="https://github.com/wekan/wekan/tree/master/torodb-postgresql">ToroDB PostgreSQL</a>
-           <br />
-           <br />
-
-         Snap
-            <a class="button" style="color: green;" href="https://github.com/wekan/wekan-snap/wiki/Install">Snap x64 automatic updates</a>
-            <a class="button" href="https://github.com/wekan/wekan-snap/wiki/Many-Snaps-on-LXC">Many Snaps on LXC</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/Ubuntu-Core">Ubuntu Core</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/Chromebook">Snap Chromebook</a>
-            <a class="button" href="https://github.com/wekan/wekan-snap/wiki/CentOS-7">CentOS 7 and RHEL7 and newer</a>
-            <a class="button" href="https://forum.snapcraft.io/t/running-snaps-on-wsl2-insiders-only-for-now/13033">Test Snap on WSL2 Insiders</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/Vultr">Vultr</a>
+            <h4>Docker/VM</h4>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/UCS">VM +integrated IdM (UCS)</a>
+            <a class="btn btn-link" href="https://artifacthub.io/packages/helm/wekan/wekan">Kubernetes (Helm Chart)</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/issues/3874#issuecomment-867526249">Upgrading Docker</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Docker">Docker amd64</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Cloudron">Cloudron</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Oracle-Identity-Cloud">Oracle Identity Cloud</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/OpenShift">OpenShift</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/PikaPods">PikaPods</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Platforms#production-saas-wekan-ready-paid-services-just-start-using">SaaS</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/tree/master/torodb-postgresql">ToroDB PostgreSQL</a>
             <br />
             <br />
 
-         Without container/VM
-            <a class="button" href="https://github.com/wekan/wekan/wiki/Raspberry-Pi">Bash/Service x64/arm64/s390x/ppc64el, OpenVZ/OVH/Kimsufi</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/Offline" style="color: green;">Offline Windows LAN</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/Mac">Mac</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/FreeBSD">FreeBSD</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/SmartOS">SmartOS</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/Qnap-NAS">Qnap NAS</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/Install-latest-Wekan-release-on-Uberspace">Uberspace</a>
-            <a class="button" href="https://github.com/wekan/wekan/wiki/Android">Server for Android</a>
-    <div class="action-buttons">
+            <h4>Snap</h4>
+            <a class="btn btn-link" style="color: green;" href="https://github.com/wekan/wekan-snap/wiki/Install">Snap x64 automatic updates</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan-snap/wiki/Many-Snaps-on-LXC">Many Snaps on LXC</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Ubuntu-Core">Ubuntu Core</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Chromebook">Snap Chromebook</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan-snap/wiki/CentOS-7">CentOS 7 and RHEL7 and newer</a>
+            <a class="btn btn-link" href="https://forum.snapcraft.io/t/running-snaps-on-wsl2-insiders-only-for-now/13033">Test Snap on WSL2 Insiders</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Vultr">Vultr</a>
+            <br />
+            <br />
 
-       <h1>Sandstorm WeKan ®</h1>
+            <h4>Without container/VM</h4>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Raspberry-Pi">Bash/Service x64/arm64/s390x/ppc64el, OpenVZ/OVH/Kimsufi</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Offline" style="color: green;">Offline Windows LAN</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Mac">Mac</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/FreeBSD">FreeBSD</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/SmartOS">SmartOS</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Qnap-NAS">Qnap NAS</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Install-latest-Wekan-release-on-Uberspace">Uberspace</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Android">Server for Android</a>
+            <br />
+            <br />
 
-         Grain
-           <a class="button" href="https://github.com/wekan/wekan/wiki/Sandstorm">Sandstorm x64</a>
+            <h3>Sandstorm WeKan ®</h3>
+            <h4>Grain</h4>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Sandstorm">Sandstorm x64</a>
+            <br />
+            <br />
+
+            <h3>Client: Javascript enabled mobile or desktop webbrowser or App</h3>
+
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/PWA" style="color: green;">Creating Mobile and Desktop App icons of your WeKan ® Server</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Browser-compatibility-matrix">Mobile Apps and compatible webbrowsers</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Touch-Screen-support" style="color: green;">Enable All Touch Screen Support</a>
+
+            <hr>
+
+            <h3>Requirements</h3>
+            Required: At least <a class="button" href="https://github.com/wekan/wekan/wiki/Backup">Daily Backups</a> of WeKan ® database with mongodump.
+            Bugs, updates, users deleting list or card, harddrive full, harddrive crash etc can eat your data. There is no undo yet.
+            Only newest WeKan ® is supported. Please <a class="button" href="https://github.com/wekan/wekan/issues">report all new bugs immediately</a>.
+            <a class="button" href="https://github.com/wekan/wekan/wiki/Sandstorm">Sandstorm WeKan ®</a> is rarely affected by</strong>
+            any Standalone WeKan ® security issues. If you use Standalone WeKan ® on public Internet, it's better use
+            <a class="button" href="https://github.com/wekan/wekan-snap/wiki/Install">Snap x64 automatic updates</a> and
+            restore from backup when needed, than to leave old vulnerable manually updated WeKan ® running.
+            <br />
+            <br />
+
+
+
+
+        </div>
     </div>
+</div>
 
-<hr>
+<div class="container-fluid bg-white">
+    <div class="container px-4 py-5">
+        <h2 class="fw-bold">More information and good links</h2>
+        <h3>Often used</h3>
+        <a class="btn btn-link" href="https://github.com/wekan/wekan/issues">Feature Requests and Bugs</a>
+        <a class="btn btn-link" href="https://wekan.team/commercial-support/">Commercial Support</a>
+        <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/master/CHANGELOG.md">ChangeLog</a>
+        <a class="btn btn-link" href="https://github.com/wekan/wekan/releases.atom"><img src="https://wekan.github.io/feed-icon.svg" width="20px" height="20px" alt="RSS Feed for Wekan ChangeLog"></a>
+        <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki">Docs</a>
+        <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Scaling">Scaling</a>
+        <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/New-card-with-Python3-and-REST-API">API</a>
+        <a class="btn btn-link" href="https://www.transifex.com/wekan/wekan">Translations</a>
+        <a class="btn btn-link" href="https://boards.wekan.team/b/D2SzJKZDS4Z48yeQH/wekan-open-source-kanban-board-with-mit-license">Roadmap (read-only)</a>
+        <a class="btn btn-link" href="https://blog.wekan.team/2020/06/maximum-transparency/">Transparency</a>
+        <a class="btn btn-link" href="https://blog.wekan.team">Blog</a>
+        <a class="btn btn-link" href="https://sivut.sandcats.io/shared/1uLGMa6ThGdSFsDKBieimkmo0Fbh5fv0g1b_7nUI1RG">Accessibility Survey 2021-12-07</a>
+        <a class="btn btn-link" href="https://sivut.sandcats.io/shared/XKdXvzeSVV9Qq1t_-aJM5N2god_zooTU-mhD92RYk2O">Saavutettavuus kysely 7.12.2021</a>
+        <br />
+        <br />
 
-    <div class="action-buttons">
-      <p>
-        Required: At least <a class="button" href="https://github.com/wekan/wekan/wiki/Backup">Daily Backups</a> of WeKan ® database with mongodump.
-        Bugs, updates, users deleting list or card, harddrive full, harddrive crash etc can eat your data. There is no undo yet.
-        Only newest WeKan ® is supported. Please <a class="button" href="https://github.com/wekan/wekan/issues">report all new bugs immediately</a>.
-        <a class="button" href="https://github.com/wekan/wekan/wiki/Sandstorm">Sandstorm WeKan ®</a> is rarely affected by</strong>
-        any Standalone WeKan ® security issues. If you use Standalone WeKan ® on public Internet, it's better use
-        <a class="button" href="https://github.com/wekan/wekan-snap/wiki/Install">Snap x64 automatic updates</a> and
-        restore from backup when needed, than to leave old vulnerable manually updated WeKan ® running.
-      </p>
+        <h3>Sometimes used</h3>
+        <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/IRC-FAQ">IRC</a>
+        <a class="btn btn-link" href="https://github.com/wekan/wekan/discussions">GitHub Discussions</a>
+        <a class="btn btn-link" href="https://gitter.im/wekan/wekan">Gitter</a>
+        <a class="btn btn-link" href="https://twitter.com/WeKanTeam">Twitter</a>
+        <a class="btn btn-link" href="https://www.reddit.com/r/wekanteam/">Reddit</a>
+        <a class="btn btn-link" href="https://www.facebook.com/wekanteam">Facebook</a>
+        <a class="btn btn-link" href="https://discord.gg/n2Va77qu">Discord</a>
+        <a class="btn btn-link" href="https://www.instagram.com/wekanteam/">Instagram</a>
+        <a class="btn btn-link" href="https://community.vanila.io/wekan">Vanila Community</a>
+        <a class="btn btn-link" href="https://chat.vanila.io/channel/wekan">Vanila RocketChat</a>
+        <br />
+        <br />
+        <hr />
     </div>
+</div>
 
-<hr>
 
-    <h1 class="brand">
-      <span class="sub-title">FOSS dev servers donated by</span>
-    </h1>
-    <br />
+<div class="container-fluid bg-white">
+    <div class="container px-4 py-5">
+        <h2 class="fw-bold">FOSS dev servers donated by</h2>
+        <div class="row">
+            <div class="col-2 m-2">
+                <a href="https://blog.wekan.team/2019/06/wekan-on-raspi3-and-arm64-server-now-works-and-whats-next-with-cncf/">
+                    <img src="https://wekan.github.io/donated/cncf-stacked-color.png" width="100%" title="amd64 and arm64 build servers donated by CNCF"
+                            aria-label="amd64 and arm64 build servers donated by CNCF" />
+                </a>
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://www.openmainframeproject.org/blog/2020/11/20/wekan-open-source-kanban-on-s390x">
+                    <img src="https://wekan.github.io/donated/logo_openmainframe.png" width="100%" title="s390x by IBM LinuxOne Community Cloud"
+                            aria-label="s390x by IBM LinuxOne Community Cloud" />
+                </a>
 
-    <div>
-      <center>
-        <a href="https://blog.wekan.team/2019/06/wekan-on-raspi3-and-arm64-server-now-works-and-whats-next-with-cncf/">
-        <img src="donated/cncf-stacked-color.png" width="auto" height="60" style="padding-bottom: 10px;" title="amd64 and arm64 build servers donated by CNCF"
-        aria-label="amd64 and arm64 build servers donated by CNCF" /></a>
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://openpower.ic.unicamp.br/minicloud/">
+                    <img src="https://wekan.github.io/donated/openpower-color.svg" width="100%" title="ppc64le by Unicamp Minicloud"
+                            aria-label="ppc64le by Unicamp Minicloud" />
+                </a>
 
-        <a href="https://www.openmainframeproject.org/blog/2020/11/20/wekan-open-source-kanban-on-s390x">
-        <img src="donated/logo_openmainframe.png" width="auto" height="50" style="padding-left: 40px; padding-bottom: 20px;" title="s390x by IBM LinuxOne Community Cloud"
-        aria-label="s390x by IBM LinuxOne Community Cloud" /></a>
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://github.com/wekan/wekan/wiki/Mac">
+                    <img src="https://wekan.github.io/donated/MacStadium-developerlogo.png" width="100%" title="Mac Mini M1 2021-04-14 for iOS and macOS dev by MacStadium"
+                            aria-label="Mac Mini M1 2021-04-14 for iOS and macOS dev by MacStadium" />
+                </a>
 
-        <a href="https://openpower.ic.unicamp.br/minicloud/">
-        <img src="donated/openpower-color.svg" width="auto" height="60" style="padding-left: 40px; padding-bottom: 10px;" title="ppc64le by Unicamp Minicloud"
-        aria-label="ppc64le by Unicamp Minicloud" /></a>
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://blog.cloudflare.com/cloudflare-open-source-your-upgrade-is-on-the-house/">
+                    <img src="https://wekan.github.io/donated/logo-cloudflare-dark-1.svg" width="100%" title="Pro Plan with CloudFlare Workers by CloudFlare"
+                            aria-label="Pro Plan with CloudFlare Workers by CloudFlare" />
+                </a>
 
-        <a href="https://github.com/wekan/wekan/wiki/Mac">
-        <img src="donated/MacStadium-developerlogo.png" width="auto" height="40" style="padding-left: 40px; padding-bottom: 20px;" title="Mac Mini M1 2021-04-14 for iOS and macOS dev by MacStadium"
-        aria-label="Mac Mini M1 2021-04-14 for iOS and macOS dev by MacStadium" /></a>
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://cloudblogs.microsoft.com/opensource/2021/09/28/announcing-azure-credits-for-open-source-projects/">
+                    <img src="https://wekan.github.io/donated/azure.png" width="60%" title="Azure Credits for Azure related features dev by Azure"
+                            aria-label="Azure Credits for Azure related features dev by Azure" />
+                </a>
 
-        <a href="https://blog.cloudflare.com/cloudflare-open-source-your-upgrade-is-on-the-house/">
-        <img src="donated/logo-cloudflare-dark-1.svg" width="auto" height="40" style="padding-left: 40px; padding-bottom: 28px;" title="Pro Plan with CloudFlare Workers by CloudFlare"
-        aria-label="Pro Plan with CloudFlare Workers by CloudFlare" /></a>
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://www.oracle.com/cloud/free/">
+                    <img src="https://wekan.github.io/donated/oracle-cloud.jpg" width="100%" title="arm64 server for dev provided Oracle Cloud Free Tier"
+                            aria-label="arm64 server for dev provided Oracle Cloud Free Tier" />
+                </a>
 
-        <a href="https://cloudblogs.microsoft.com/opensource/2021/09/28/announcing-azure-credits-for-open-source-projects/">
-        <img src="donated/azure.png" width="auto" height="40" style="padding-left: 40px; padding-bottom: 28px;" title="Azure Credits for Azure related features dev by Azure"
-        aria-label="Azure Credits for Azure related features dev by Azure" /></a>
 
-        <a href="https://www.oracle.com/cloud/free/">
-        <img src="donated/oracle-cloud.jpg" width="auto" height="40" style="padding-left: 40px; padding-bottom: 28px;" title="arm64 server for dev provided Oracle Cloud Free Tier"
-        aria-label="arm64 server for dev provided Oracle Cloud Free Tier" /></a>
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://dapsi.ngi.eu/20-new-solutions-to-bring-the-power-of-data-back-to-peoples-hands/">
+                    <img src="https://wekan.github.io/donated/fiware.png" width="100%" title="OpenStack server as part of NGI DAPSI CALL 3: MULTIVERSE by FIWARE"
+                            aria-label="OpenStack server as part of NGI DAPSI CALL 3: MULTIVERSE by FIWARE" />
+                </a>
 
-        <a href="https://dapsi.ngi.eu/20-new-solutions-to-bring-the-power-of-data-back-to-peoples-hands/">
-        <img src="donated/fiware.png" width="100" height="auto" style="padding-left: 40px; padding-bottom: 40px;" title="OpenStack server as part of NGI DAPSI CALL 3: MULTIVERSE by FIWARE"
-        aria-label="OpenStack server as part of NGI DAPSI CALL 3: MULTIVERSE by FIWARE" /></a>
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://about.gitlab.com/solutions/open-source/">
+                    <img src="https://wekan.github.io/donated/gitlab-logo-150.png" width="100%" padding-bottom: 28px;"
+                            title="GitLab for Open Source at https://gitlab.com/wekan/wekan by GitLab"
+                            aria-label="GitLab for Open Source at https://gitlab.com/wekan/wekan by GitLab" />
+                </a>
 
-        <a href="https://about.gitlab.com/solutions/open-source/">
-        <img src="donated/gitlab-logo-150.png" width="auto" height="40" style="padding-left: 40px; padding-bottom: 28px;"
-        title="GitLab for Open Source at https://gitlab.com/wekan/wekan by GitLab"
-        aria-label="GitLab for Open Source at https://gitlab.com/wekan/wekan by GitLab" /></a>
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://www.browserstack.com/open-source">
+                    <img src="https://wekan.github.io/donated/browserstack.png" width="100%" title="Fast browser versions testing by BrowserStack"
+                            aria-label="Fast browser versions testing by BrowserStack" />
+                </a>
 
-        <a href="https://www.browserstack.com/open-source">
-        <img src="donated/browserstack.png" width="auto" height="30" style="padding-left: 40px; padding-bottom: 28px;" title="Fast browser versions testing by BrowserStack"
-        aria-label="Fast browser versions testing by BrowserStack" /></a>
+            </div>
+        </div>
+
+        <h3>Some FOSS dev grants by</h3>
+        <div class="row">
+            <div class="col-2 m-2">
+                <a href="https://fuug.fi/?s=wekan"><img src="https://wekan.github.io/donated/fuug-fi.png" width="100%" title="Grants from Finnish Unix Users Group for WeKan ® development" /></a>
+
+            </div>
+            <div class="col-2 m-2">
+                <a href="https://dapsi.ngi.eu/20-new-solutions-to-bring-the-power-of-data-back-to-peoples-hands/"><img src="https://wekan.github.io/donated/NGI_DAPSI_Tag-color-positive.png" width="100%" title="NGI DAPSI CALL 3: MULTIVERSE" /></a>
+
+            </div>
+        </div>
+        <br />
+        <br />
+
+        <hr />
 
         <br />
+        <br />
+
+        <h2 class="fw-bold">Awards / Press</h2>
 
         <a href="https://www.20i.com/foss-awards/winners">
-        <img src="donated/foss-awards-2022/project-management-wekan.png" width="auto" height="200" style="padding-left: 40px; padding-bottom: 28px;"
-        title="FOSS Awards 2022 winner, Project Management, WeKan Highly Recommeded: 20i provides free-for-FOSS-project-life 6-core VPS at UK datacenter to give back to FOSS community"
-        aria-label="FOSS Awards 2022 winner, Project Management, WeKan Highly Recommeded: 20i provides free-for-life 6-core VPS at UK datacenter to give back to FOSS community" /></a>
+            <img src="https://wekan.github.io/donated/foss-awards-2022/project-management-wekan.png" width="auto" height="200" style="padding-left: 40px; padding-bottom: 28px;"
+                    title="FOSS Awards 2022 winner, Project Management, WeKan Highly Recommeded: 20i provides free-for-FOSS-project-life 6-core VPS at UK datacenter to give back to FOSS community"
+                    aria-label="FOSS Awards 2022 winner, Project Management, WeKan Highly Recommeded: 20i provides free-for-life 6-core VPS at UK datacenter to give back to FOSS community" />
+        </a>
 
         <br />
 
-        <a style="color: blue;" href="donated/foss-awards-2022/20i_FOSS_Awards_Winners_Announced_(Press_Release).pdf" title="20i FOSS Awards 2022 Press Release PDF"
-        aria-label="20i FOSS Awards 2022 Press Release PDF">20i_FOSS_Awards_Winners_Announced_(Press_Release).pdf</a>
+        <a style="color: blue;" href="https://wekan.github.io/donated/foss-awards-2022/20i_FOSS_Awards_Winners_Announced_(Press_Release).pdf" title="20i FOSS Awards 2022 Press Release PDF"
+            aria-label="20i FOSS Awards 2022 Press Release PDF">20i_FOSS_Awards_Winners_Announced_(Press_Release).pdf</a>
 
-      </center>
+
     </div>
+</div>
 
-<hr>
 
-    <h1 class="brand">
-      <span class="sub-title">Some FOSS dev grants by</span>
-    </h1>
-    <br />
-
-    <div>
-      <center>
-        <a href="https://fuug.fi/?s=wekan"><img src="donated/fuug-fi.png" width="100" height="auto" style="padding-left: 40px; padding-bottom: 25px;" title="Grants from Finnish Unix Users Group for WeKan ® development" /></a>
-        <a href="https://dapsi.ngi.eu/20-new-solutions-to-bring-the-power-of-data-back-to-peoples-hands/"><img src="donated/NGI_DAPSI_Tag-color-positive.png" width="100" height="auto" style="padding-left: 40px; padding-bottom: 25px;" title="NGI DAPSI CALL 3: MULTIVERSE" /></a>
-      </center>
+<div class="container-fluid wekan-dark-blue">
+    <div class="container px-4 py-5">
+        <div class="row">
+            <div class="col-12 text-white">
+                <a href="https://www.tmdn.org/tmview/#/tmview/detail/FI50202100052006A" class="text-white">Registered trademark in Finland</a>.
+                Other countries usually honor trademarks of one country.
+                <br /><br />
+                Wekan is MIT License (MIT)
+            </div>
+        </div>
     </div>
+</div>
 
-<hr>
-
-    <h1 class="brand">
-      <span class="sub-title">Summer 2022 greetings to Maarit for helping us acquire replacement gear</span>
-    </h1>
-    <br />
-
-    <div>
-      <center>
-        <img src="donated/maarit.png" width="auto" height="100" style="padding-left: 40px; padding-bottom: 28px;" title="Maarit"
-        aria-label="Maarit" />
-      </center>
-    </div>
-
-<hr>
-
-    <h1 class="brand">
-      <span class="sub-title">Featured in</span>
-    </h1>
-    <br />
-
-    <div>
-      <a href="https://www.linux-magazine.com/Issues/2021/251/Visual-Aid/(language)/eng-US" style="height: 200px;">
-        <img src="featured/featured-in-linux-magazine.png" width="100" height="auto" /> 2021-10 Issue 251</a>
-      <a href="https://www.linuxformat.com/archives?issue=263" style="height: 200px;">
-        <img src="featured/featured-in-linux-format.png" style="padding-left: 80px;" width="100" height="auto" /> 2020-06 Issue 263</a>
-    </div>
-
-    <br />
-    <br />
-
-<hr>
-    <h1>&nbsp;</h1>
-
-    <div class="screenshot-banner1">
-      <img src="allow-private-boards-only.png" alt="WeKan ® Screenshot of Allow private boards only" />
-    </div>
-
-    <h1>&nbsp;<br /></h1>
-
-    <div class="screenshot-banner1">
-      <img src="wekan-dark-mode.png" alt="WeKan ® Screenshot of Dark Mode" />
-    </div>
-
-    <h1>&nbsp;<br /></h1>
-
-    <div class="screenshot-banner">
-      <a href="https://github.com/wekan/wekan/wiki/IFTTT"><img src="ifttt/rules.png" /></a>
-    </div>
-
-    <h1>&nbsp;<br /></h1>
-
-    <div class="screenshot-banner">
-      <img src="wekan-import-board.png" alt="Screenshot - WeKan ® Import" />
-    </div>
-
-    <h1>&nbsp;<br /></h1>
-
-    <div class="screenshot-banner">
-      <img src="wekan-admin-panel.png" alt="Screenshot - WeKan ® Admin Panel" />
-    </div>
-
-    <h1>&nbsp;<br /></h1>
-
-    <div class="screenshot-banner">
-      <img src="wekan-linux64bit-docker-in-win10.png" alt="Screenshot - WeKan ® in Windows 10" />
-    </div>
-
-  </body>
+</body>
 </html>
