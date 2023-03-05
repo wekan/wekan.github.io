@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,10 +14,10 @@
 
 
     <!-- Bootstrape framework -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
     <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" integrity="sha512-YFENbnqHbCRmJt5d+9lHimyEMt8LKSNTMLSaHjvsclnZGICeY/0KYEeiHwD1Ux4Tcao0h60tdcMv+0GljvWyHg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css" />
 
     <!-- Use same styles as Wekan board -->
     <style>
@@ -41,24 +42,7 @@
             background: #dedede;
         }
 
-        .nav-masthead .nav-link {
-            color: rgba(255, 255, 255, .5);
-            border-bottom: .25rem solid transparent;
-        }
 
-        .nav-masthead .nav-link:hover,
-        .nav-masthead .nav-link:focus {
-            border-bottom-color: rgba(255, 255, 255, .25);
-        }
-
-        .nav-masthead .nav-link + .nav-link {
-            margin-left: 1rem;
-        }
-
-        .nav-masthead .active {
-            color: #fff;
-            border-bottom-color: #fff;
-        }
     </style>
 </head>
 <body>
@@ -69,16 +53,15 @@
         <div class="row">
             <div class="col-lg-6 col-sm-12">
                 <div class="mb-3 mt-3">
-                    <a class="navbar-brand" href="/"><img src="wekan-logo.png" alt="WeKan ®" height="60px" />&nbsp;</a>
+                    <a class="navbar-brand" href="/"><img src="https://wekan.github.io/wekan-logo.png" alt="WeKan ®" height="100px" border="1" />&nbsp;</a>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-12">
-                <nav class="nav nav-masthead justify-content-center float-md-start">
-                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#home">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#download">Download</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#security">Security</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#features">Features</a>
-                </nav>
+            <div class="col-lg-6 col-sm-12 text-end">
+                    <a class="btn btn-link text-white" aria-current="page" href="#home">Home</a>
+                    <a class="btn btn-link text-white" href="#install">Install</a>
+                    <a class="btn btn-link text-white" href="#security">Security</a>
+                    <a class="btn btn-link text-white" href="#features">Features</a>
+               
             </div>
         </div>
     </header>
@@ -89,13 +72,13 @@
     <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
             <div class="col-10 col-sm-8 col-lg-6">
-                <img src="https://wekan.github.io/wekan-dark-mode.png" class="d-block mx-lg-auto img-fluid" alt="Wekan" width="700" height="500" loading="lazy">
+                <img src="https://wekan.github.io/wekan-dark-mode.png" class="d-block mx-lg-auto img-fluid" alt="WeKan" width="700" height="500" loading="lazy">
             </div>
             <div class="col-lg-6">
                 <h1 class="display-5 fw-bold lh-1 mb-3 text-white">WeKan ®<br> Open-Source Kanban</h1>
                 <p class="lead text-white">Experience efficient task management with Wekan - the open-source, customizable, and privacy-focused alternative to Trello, Asana, Monday.com, Jira, Basecamp and others.</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <a href="#download" class="btn btn-dark btn-lg px-4 me-md-2">Download</a>
+                    <a href="#install" class="btn btn-dark btn-lg px-4 me-md-2">Install</a>
                     <a href="https://wekan.team/commercial-support/" class="btn btn-link btn-lg px-4 text-white">Commercial support</a>
                 </div>
             </div>
@@ -104,54 +87,61 @@
 </div>
 
 <div class="container px-4 py-5" id="featured-3">
-    <h2 class="fw-bold">Features in WeKan ®</h2>
+    <h2 class="fw-bold">Features in Wekan</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-                <i class="bi bi-kanban"></i>
+        <div class="feature col d-flex align-items-stretch">
+            <div class="card bg-white shadow">
+                <div class="card-body">
+
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+                            <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z" />
+                            <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z" />
+                        </svg>
+                    </div>
+
+                    <h3 class="fs-2">Boards</h3>
+                    <p>
+                        You can make many boards for different projects or tasks. Each board can have columns to show the different stages of your work, such as "To Do," "Doing," and "Done." You can also add cards to each board to represent tasks, with titles, descriptions, and due dates. Wekan helps you keep track of your tasks and projects visually, so you can see what needs to be done and what has been completed.
+                    </p>
+                </div>
+
             </div>
-
-            <h3 class="fs-2">Boards</h3>
-            <p>
-                You can make many boards for different projects or tasks.
-                Each board can have columns to show the different stages of your work,
-                such as "To Do," "Doing," and "Done."
-                You can also add cards to each board to represent tasks, with titles, descriptions, and due dates.
-                WeKan ® helps you keep track of your tasks and projects visually, so you can see what needs to be done and what has been completed.
-            </p>
-
         </div>
-
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-                <i class="bi bi-list"></i>
+        <div class="feature col d-flex align-items-stretch">
+            <div class="card bg-white shadow">
+                <div class="card-body">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-columns" viewBox="0 0 16 16">
+                            <path d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V2zm8.5 0v8H15V2H8.5zm0 9v3H15v-3H8.5zm-1-9H1v3h6.5V2zM1 14h6.5V6H1v8z" />
+                        </svg>
+                    </div>
+                    <h3 class="fs-2">Lists</h3>
+                    <p>
+                        Wekan uses lists on a Kanban board to represent different stages of a workflow, such as "To Do," "Doing," and "Done." Lists help you organize and track tasks on the board. To add a new list, click "Add a list" and give it a name. You can move tasks between lists by dragging and dropping them. Lists can be customized by changing their color or adding custom fields to capture more information about tasks.
+                    </p>
+                </div>
             </div>
-            <h3 class="fs-2">Lists</h3>
-            <p>
-                WeKan ® uses lists on a Kanban board to represent different stages of a workflow,
-                such as "To Do," "Doing," and "Done." Lists help you organize and track tasks on the board.
-                To add a new list, click "Add a list" and give it a name.
-                You can move tasks between lists by dragging and dropping them.
-                Lists can be customized by changing their color or adding custom fields to capture more information about tasks.
-            </p>
         </div>
-
-        <div class="feature col">
-            <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
-                <i class="bi bi-card-heading"></i>
+        <div class="card bg-white shadow">
+            <div class="card-body">
+                <div class="feature cold-flex align-items-stretch">
+                    <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-card-checklist" viewBox="0 0 16 16">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                            <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="fs-2">Cards</h3>
+                    <p>
+                        A card represents a task on a Kanban board. It includes a title, description, due date, labels, and comments. To create a new card, choose the board and column, and add the relevant details. As work progresses, move the card from one column to another. Cards can be customized by adding labels, files, and checklists. You can also comment on cards to provide updates or feedback.
+                    </p>
+                </div>
             </div>
-            <h3 class="fs-2">Cards</h3>
-            <p>
-                A card represents a task on a Kanban board. It includes a title, description, due date, labels, and comments.
-                To create a new card, choose the board and column, and add the relevant details.
-                As work progresses, move the card from one column to another.
-                Cards can be customized by adding labels, files, and checklists. You can also comment on cards to provide updates or feedback.
-            </p>
-
         </div>
-
-    </div>
+     </div>
 </div>
+
 
 <a name="security"></a>
 <div class="container-fluid bg-white">
@@ -160,61 +150,64 @@
         <div class="row row-cols-1 row-cols-md-2 align-items-md-top g-5 py-5">
             <div class="d-flex flex-column align-items-start gap-2">
                 <h3 class="fw-bold">Security in focus</h3>
-                <p class="text-muted">WeKan ® takes data security very seriously and has implemented several measures to protect your data.
-                   Here are some reasons why Wekan is more secure and better protects your data than some competitors</p>
-                <p class="text-muted">Compared to other kanban boards, one of the biggest advantages of WeKan ® is its self-hosting option,
-                   which gives users more control over their data, better security, greater customization options, cost-effectiveness,
-                   and long-term viability.</p>
+                <p class="text-muted">Wekan takes data security very seriously and has implemented several measures to protect your data. Here are some reasons why Wekan is more secure and better protects your data than some competitors</p>
+                <p class="text-muted">Compared to other kanban boards, one of the biggest advantages of Wekan is its self-hosting option, which gives users more control over their data, better security, greater customization options, cost-effectiveness, and long-term viability.</p>
                 <a href="https://github.com/wekan/wekan/blob/master/SECURITY.md" class="btn btn-outline-primary btn-lg">More about security</a>
                 <a href="https://wekan.github.io/hall-of-fame" class="btn btn-link btn-lg">CVE Hall of Fame</a>
             </div>
             <div class="row row-cols-1 row-cols-sm-2 g-4">
                 <div class="d-flex flex-column gap-2">
                     <div class="feature-icon d-inline-flex align-items-center justify-content-left fs-4 rounded-3">
-                        <i class="bi bi-file-binary"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-binary" viewBox="0 0 16 16">
+                            <path d="M5.526 13.09c.976 0 1.524-.79 1.524-2.205 0-1.412-.548-2.203-1.524-2.203-.978 0-1.526.79-1.526 2.203 0 1.415.548 2.206 1.526 2.206zm-.832-2.205c0-1.05.29-1.612.832-1.612.358 0 .607.247.733.721L4.7 11.137a6.749 6.749 0 0 1-.006-.252zm.832 1.614c-.36 0-.606-.246-.732-.718l1.556-1.145c.003.079.005.164.005.249 0 1.052-.29 1.614-.829 1.614zm5.329.501v-.595H9.73V8.772h-.69l-1.19.786v.688L8.986 9.5h.05v2.906h-1.18V13h3z" />
+                            <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                        </svg>
                     </div>
                     <h4 class="fw-semibold mb-0">Open Source software</h4>
-                    <p class="text-muted">WeKan ® is an open-source project, which means that its source code is available for anyone
-                      to inspect and audit for security vulnerabilities. This makes it less likely that there are hidden
-                      security holes that could be exploited by attackers.</p>
+                    <p class="text-muted">WeKan is an open-source project, which means that its source code is available for anyone to inspect and audit for security vulnerabilities. This makes it less likely that there are hidden security holes that could be exploited by attackers.</p>
                 </div>
 
                 <div class="d-flex flex-column gap-2">
                     <div class="feature-icon d-inline-flex align-items-center justify-content-left fs-4 rounded-3">
-                        <i class="bi bi-hdd-network"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-hdd-network" viewBox="0 0 16 16">
+                            <path d="M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zM3 4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8.5v3a1.5 1.5 0 0 1 1.5 1.5h5.5a.5.5 0 0 1 0 1H10A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5H.5a.5.5 0 0 1 0-1H6A1.5 1.5 0 0 1 7.5 10V7H2a2 2 0 0 1-2-2V4zm1 0v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1zm6 7.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5z" />
+                        </svg>
                     </div>
                     <h4 class="fw-semibold mb-0">Self-hosted option</h4>
-                    <p class="text-muted">WeKan ® offers a self-hosted option, which allows you to run the software on your own servers.
-                       This gives you full control over your data and can help you ensure that your data is not being accessed or shared
-                        without your knowledge.</p>
+                    <p class="text-muted">WeKan offers a self-hosted option, which allows you to run the software on your own servers. This gives you full control over your data and can help you ensure that your data is not being accessed or shared without your knowledge.</p>
                 </div>
 
                 <div class="d-flex flex-column gap-2">
                     <div class="feature-icon d-inline-flex align-items-center justify-content-left fs-4 rounded-3">
-                        <i class="bi bi-lock"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-shield-lock" viewBox="0 0 16 16">
+                            <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                            <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415z" />
+                        </svg>
                     </div>
                     <h4 class="fw-semibold mb-0">Access controls</h4>
-                    <p class="text-muted">WeKan ® allows you to set up access controls to limit who can see and edit your boards and cards.
-                        You can set permissions at the board level or for individual users, which helps you control who has access to sensitive data.</p>
+                    <p class="text-muted">WeKan allows you to set up access controls to limit who can see and edit your boards and cards. You can set permissions at the board level or for individual users, which helps you control who has access to sensitive data.</p>
                 </div>
 
                 <div class="d-flex flex-column gap-2">
                     <div class="feature-icon d-inline-flex align-items-center justify-content-left fs-4 rounded-3">
-                        <i class="bi bi-shield-check"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                            <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z" />
+                            <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
                     </div>
                     <h4 class="fw-semibold mb-0">Security</h4>
-                    <p class="text-muted">Wekan is designed with security in mind, and its features and options are built to help you
-                       protect your data and keep it secure.</p>
+                    <p class="text-muted">WeKan is designed with security in mind, and its features and options are built to help you protect your data and keep it secure.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<a name="download"></a>
+<a name="install"></a>
 <div class="container-fluid">
     <div class="container px-4 py-5">
-        <h2 class="fw-bold">Download WeKan ®</h2>
+        <h2 class="fw-bold">Install WeKan</h2>
         <div class="action-buttons">
 
             <h3>Standalone WeKan ®</h3>
@@ -234,7 +227,7 @@
             <br />
 
             <h4>Snap</h4>
-            <a class="btn btn-link" style="color: green;" href="https://github.com/wekan/wekan-snap/wiki/Install">Snap x64 automatic updates</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan-snap/wiki/Install">Snap x64 automatic updates</a>
             <a class="btn btn-link" href="https://github.com/wekan/wekan-snap/wiki/Many-Snaps-on-LXC">Many Snaps on LXC</a>
             <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Ubuntu-Core">Ubuntu Core</a>
             <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Chromebook">Snap Chromebook</a>
@@ -246,7 +239,7 @@
 
             <h4>Without container/VM</h4>
             <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Raspberry-Pi">Bash/Service x64/arm64/s390x/ppc64el, OpenVZ/OVH/Kimsufi</a>
-            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Offline" style="color: green;">Offline Windows LAN</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Offline">Offline Windows LAN</a>
             <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Mac">Mac</a>
             <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/FreeBSD">FreeBSD</a>
             <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/SmartOS">SmartOS</a>
@@ -264,9 +257,9 @@
 
             <h3>Client: Javascript enabled mobile or desktop webbrowser or App</h3>
 
-            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/PWA" style="color: green;">Creating Mobile and Desktop App icons of your WeKan ® Server</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/PWA">Creating Mobile and Desktop App icons of your WeKan ® Server</a>
             <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Browser-compatibility-matrix">Mobile Apps and compatible webbrowsers</a>
-            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Touch-Screen-support" style="color: green;">Enable All Touch Screen Support</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/wiki/Touch-Screen-support">Enable All Touch Screen Support</a>
 
             <hr>
 
@@ -447,7 +440,7 @@
                 <a href="https://www.tmdn.org/tmview/#/tmview/detail/FI50202100052006A" class="text-white">Registered trademark in Finland</a>.
                 Other countries usually honor trademarks of one country.
                 <br /><br />
-                WeKan ® is MIT License (MIT)
+                WeKan is MIT License (MIT)
             </div>
         </div>
     </div>
