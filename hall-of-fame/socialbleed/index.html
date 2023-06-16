@@ -2,7 +2,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Wekan — Hall of Fame / Emailbleed</title>
+  <title>WeKan — Hall of Fame / SocialBleed</title>
   <link rel="icon" href="../../wekan-favicon.png">
   <link rel="stylesheet" type="text/css" href="../../main.css">
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
@@ -21,10 +21,9 @@
   </div>
 
   <div class="hof">
-    <h1 class="hof">Contents / Emailbleed</h1>
+    <h1 class="hof">Contents / SocialBleed</h1>
 
     <table border="1" margin="0" padding="10px" width="100%">
-
       <tr>
         <th width="10%">CVE</th>
         <th width="10%">Vulnerability name</th>
@@ -35,15 +34,16 @@
         </th>
         <th width="40%">Vulnerabilities</th>
       </tr>
-
       <tr>
-        <td valign="top">
+       <td valign="top">
           TODO
         </td>
-        <td valign="top"><b>Emailbleed</b> <h2><i class="fa fa-envelope-o" aria-hidden="true"></i> <i class="fa fa-tint" style="color: red;" aria-hidden="true"></i></h2></td>
-        <td valign="top">2021-01-26 12.42 EET</td>
+        <td valign="top"><b>SocialBleed</b>
+          <h2><i class="fa fa-comments" aria-hidden="true"></i>
+          <i class="fa fa-tint" style="color: red;" aria-hidden="true"></i></h2></td>
+        <td valign="top">2023-05-11 19.14 EET</td>
         <td valign="top">
-          <b><a href="https://www.georg-krause.net">Georg Krause</a></b><br />
+          <b>Rajesh Thapa</b><br />
           <img src="../GoldStar.png" width="30px" height="auto" />
           <img src="../GoldStar.png" width="30px" height="auto" />
           <img src="../GoldStar.png" width="30px" height="auto" />
@@ -52,12 +52,14 @@
         </td>
         <td valign="top">
           <ul>
-            <li>Security: SMTP password visible to Admin at Admin Panel by using browser inspect to see behind asterisks</li>
-            <li>Affected Wekan v1.59-v4.98</li>
-            <li>Fixed at <a href="https://github.com/wekan/wekan/blob/master/CHANGELOG.md#v499-2021-02-25-wekan-release">Wekan v4.99 2021-02-25</a></li>
+            <li>Security: Links to Social Media at <a href="https://wekan.github.io">wekan.github.io</a> could lead to theft of sensitive information</li>
+            <li>Affected Wekan website before 2024-05-12 05.34 EET</li>
+            <li>Fixed at Wekan website 2023-05-12 05.34 EET</a></li>
+            <li><a href="socialbleed/">More details</a></li>
           </ul>
         </td>
       </tr>
+
 
     </table>
   </div>
@@ -73,31 +75,36 @@
         <th width="60%">Details</th>
       </tr>
       <tr>
-        <td vAlign="top"><a name="FIELD"></a><b>2020-03-23 17:03 EET</b></td>
+        <td vAlign="top"><a name="FIELD"></a><b>2023-05-11 19.14 EET</b></td>
         <td vAlign="top">
           Report received.<br />
           <br />
-          Georg Krause wrote:<br /><br />
-
-          Hello,<br />
-          today I noticed a security issue: Everyone with access to the admin panel is able to copy the SMTP
-          password. Its hidden behind **** in the password field, but copy actions are possible. Its better to
-          not expose the password in plain text to the frontend in any way. Please fix asap.<br />
-          <br />
-          Kind regards, Georg<br />
+          Report had details how links to social media, like Discord, can lead to theft of
+          sensitive information like location, email etc,
+          trick the victim to download ransomware trojan etc.
         </td>
       </tr>
-
       <tr>
-        <td vAlign="top">
-          <b>2021-02-25</b>
-        </td>
-        <td vAlign="top">
-            <a href="https://github.com/wekan/wekan/blob/master/CHANGELOG.md#v499-2021-02-25-wekan-release">Wekan v4.99 2021-02-25</a>
-            released by xet7 with fix.
+        <td vAlign="top"><a name="FIELD"></a><b>2023-05-12 05.34 EET</b></td>
+        <td valign="top">
+          <ul>
+            <li>Security: Links to Social Media at <a href="https://wekan.github.io">wekan.github.io</a> could lead to theft of sensitive information</li>
+            <li>Affected Wekan website before 2024-05-12 05.34 EET</li>
+            <li>Fixed at Wekan website 2023-05-12 05.34 EET</a></li>
+            <li>Fixed by WeKan maintainer xet7 by:
+               <ul>
+                 <li>Removing links to all social media from website, only having official contant with
+                     <a href="https://github.com/wekan/wekan/issues">Public: Feature Requests and Bugs</a> with GitHub Issues and
+                     <a href="https://wekan.team/commercial-support/">Commercial Support</a> with Email and Private Chat
+                 </li>
+                 <li>Removing all other contributors from WeKan GitHub Organization https://github.com/wekan
+                      to prevent any direct unnoticed changes, only allowing Pull Requests
+                 </li>
+                </ul>
+            </li>
+          </ul>
         </td>
       </tr>
-
     </table>
   </div>
 
