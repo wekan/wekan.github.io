@@ -30,7 +30,7 @@
         <th width="10%">Vulnerability name</th>
         <th width="10%">Date</th>
         <th width="20%">
-          <a href="https://github.com/wekan/wekan/blob/master/SECURITY.md">Responsible Security Disclosure</a>
+          <a href="https://github.com/wekan/wekan/blob/main/SECURITY.md">Responsible Security Disclosure</a>
           by
         </th>
         <th width="40%">Vulnerabilities</th>
@@ -48,13 +48,13 @@
           <img src="../GoldStar.png" width="30px" height="auto" />
           <img src="../GoldStar.png" width="30px" height="auto" />
           <img src="../GoldStar.png" width="30px" height="auto" /><br />
-          Did send report and sent fix! Although, report was at <a href="https://github.com/wekan/wekan/issues/3482">public GitHub issue</a>, not via <a href="https://github.com/wekan/wekan/blob/master/SECURITY.md" style="color: red;">Responsible Security Disclosure</a>
+          Did send report and sent fix! Although, report was at <a href="https://github.com/wekan/wekan/issues/3482">public GitHub issue</a>, not via <a href="https://github.com/wekan/wekan/blob/main/SECURITY.md" style="color: red;">Responsible Security Disclosure</a>
         </td>
         <td valign="top">
           <ul>
             <li>Security: SSL/TLS certificate validation for LDAP disabled by default</li>
             <li>Affected Wekan v1.53.1-v4.87</li>
-            <li>Fixed at <a href="https://github.com/wekan/wekan/blob/master/CHANGELOG.md#v488-2021-01-28-wekan-release">Wekan v4.88 2021-01-28</a></li>
+            <li>Fixed at <a href="https://github.com/wekan/wekan/blob/main/CHANGELOG.md#v488-2021-01-28-wekan-release">Wekan v4.88 2021-01-28</a></li>
           </ul>
         </td>
       </tr>
@@ -79,7 +79,7 @@
           <br />
           robert-scheck wrote:<br /><br />
 
-          As of writing, Wekan disables the SSL/TLS certificate validation for LDAP by default <a href="https://github.com/wekan/wekan/blob/master/packages/wekan-ldap/server/ldap.js#L22">
+          As of writing, Wekan disables the SSL/TLS certificate validation for LDAP by default <a href="https://github.com/wekan/wekan/blob/main/packages/wekan-ldap/server/ldap.js#L22">
           unless <code>LDAP_REJECT_UNAUTHORIZED=true</code></a> is explicitly set.
           Thus, by default, Wekan is effectively vulnerable to MITM attacks, even when using SSL/TLS for LDAP.
           I treat this default behaviour as bad, given that security shouldn't be opt-in but opt-out (e.g. for test-only environments).
@@ -96,7 +96,7 @@
           <b>2021-01-28</b>
         </td>
         <td vAlign="top">
-          <a href="https://github.com/wekan/wekan/blob/master/CHANGELOG.md#v488-2021-01-28-wekan-release">Wekan v4.88 2021-01-28</a>
+          <a href="https://github.com/wekan/wekan/blob/main/CHANGELOG.md#v488-2021-01-28-wekan-release">Wekan v4.88 2021-01-28</a>
             released by xet7 with <a href="https://github.com/wekan/wekan/pull/3483">fix from robert-scheck</a>.
         </td>
       </tr>
