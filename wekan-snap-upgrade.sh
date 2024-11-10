@@ -2,7 +2,7 @@
 
 # ==== SETTINGS START ======
 
-MONGODB_PORT=$MONGODB_PORT
+MONGODB_PORT=27019
 
 # MongoDB database name.
 DATABASE=wekan
