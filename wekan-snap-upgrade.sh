@@ -22,13 +22,11 @@ if [ "$(id -u)" -ne 0 ]; then
         exit 1
 fi
 
-cpuavx=$(cat /proc/cpuinfo | grep avx)
-if [ -z "${cpuavx}" ]; then
-  echo "Your CPU does not support AVX, so upgrading WeKan does not work. MongoDB 5 and newer requires AVX. WeKan uses MongoDB 6."
-  echo "Stop WeKan with 'sudo stop wekan' . Save settings with 'sudo snap get wekan > settings.txt' ."
-  echo "Copy /var/snap/wekan/common/* to other server, where CPU supports AVX."
-  exit 1
-fi
+#cpuavx=$(cat /proc/cpuinfo | grep avx)
+#if [ -z "${cpuavx}" ]; then
+#  echo "Your CPU does not support AVX. WeKan will add support for AVX soon, by running MongoDB 6 at Qemu."
+#  exit 1
+#fi
 
 function pause(){
         read -p "$*"
@@ -103,6 +101,18 @@ do
               echo "STEP 4: MIGRATE ATTACHMENTS"
 
               /snap/$SNAPNAME/current/usr/bin/mongosh --port $MONGODB_PORT --host 127.0.0.1 \
+                --db wekan --eval "db.attachments.files.drop()"
+
+              /snap/$SNAPNAME/current/usr/bin/mongosh --port $MONGODB_PORT --host 127.0.0.1 \
+                --db wekan --eval "db.attachments.chunks.drop()"
+
+              /snap/$SNAPNAME/current/usr/bin/mongosh --port $MONGODB_PORT --host 127.0.0.1 \
+                --db wekan --eval "db.avatars.files.drop()"
+
+              /snap/$SNAPNAME/current/usr/bin/mongosh --port $MONGODB_PORT --host 127.0.0.1 \
+                --db wekan --eval "db.avatars.chunks.drop()"
+
+              /snap/$SNAPNAME/current/usr/bin/mongosh --port $MONGODB_PORT --host 127.0.0.1 \
                 --db wekan --eval "db.cfs_gridfs.attachments.chunks.renameCollection('attachments.chunks')"
 
               /snap/$SNAPNAME/current/usr/bin/mongosh --port $MONGODB_PORT --host 127.0.0.1 \
@@ -110,9 +120,6 @@ do
 
               /snap/$SNAPNAME/current/usr/bin/mongosh --port $MONGODB_PORT --host 127.0.0.1 \
                 --db wekan --eval "db.cfs_gridfs.avatars.chunks.renameCollection('avatars.chunks')"
-
-              /snap/$SNAPNAME/current/usr/bin/mongosh --port $MONGODB_PORT --host 127.0.0.1 \
-                --db wekan --eval "db.cfs.avatars.filerecord.renameCollection('avatars')"
 
               /snap/$SNAPNAME/current/usr/bin/mongosh --port $MONGODB_PORT --host 127.0.0.1 \
                 --db wekan --eval "db.cfs_gridfs.avatars.files.renameCollection('avatars.files')"
@@ -142,7 +149,8 @@ do
 
                       # Determine file type
                       isPDF=$(echo "$type" | grep -q "pdf" && echo "true" || echo "false")
-                      isImage=$(echo "$type" | grep -q "image" && echo "true" || echo "false")
+                      isImage=$(echo "$type" | grep -E -- "image|png|jpg|jpeg|gif|bmp|tiff|svg|webp|pcx" && echo "true" || echo "false")
+                      isVideo=$(echo "$type" | grep -E -- "video|mp4|m4p|m4v|m4mov|qt|wmv|avi|mpeg|mpg|mp2|mpe|flv|webm|mkv|flv|ogg|mts|m2ts|ts|gifv" && echo "true" || echo "false")
 
                       echo "Creating new format for: $name"
 
