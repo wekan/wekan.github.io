@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="en">
+  <head>
+    <title>WeKan ® - MultiDrag at InteractJS.io</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    
+    <meta name="viewport" content="maximum-scale=1.0,width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="application-name" content="WeKan ®">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#fff">
+<style>
+#drag-1, #drag-2, #drag-3, #drag-4 {
+  color: white;
+  margin: 1rem 0 0 1rem;
+  touch-action: none;
+  user-select: none;
+  transform: translate(0px, 0px);
+  cursor: move;
+  background:url("img/round-blue.gif") top left no-repeat;
+}    
+
+.draggable {
+  touch-action: none;
+}
+  </style>
+
+<script src="js/interact.js"></script>
+    <style type="text/css">
+        #drop_file_zone {
+            background-color: #EEE;
+            border: #999 5px dashed;
+            width: 290px;
+            height: 200px;
+            padding: 8px;
+            font-size: 18px;
+        }
+        #drag_upload_file {
+            width:50%;
+            margin:0 auto;
+        }
+        #drag_upload_file p {
+            text-align: center;
+        }
+        #drag_upload_file #selectfile {
+            display: none;
+        }
+        #oneboard {
+          min-height: 100px;
+          border: 1px solid black;
+          padding: 2px;
+          border-radius: 10px 10px 10px 10px;
+        }
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+          background-color: #dfdfdf;
+          margin: 0;
+          padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<br>
+
+<br>
+
+<h2>MultiDrag test, for future version of <a href="https://wekan.github.io">WeKan Open Source kanban</a></h2>
+
+<p>This MultiDrag test uses <a href="https://interactjs.io">https://interactjs.io</a> drag drop</p>
+
+<p>Features:</p>
+
+<ul>
+  <li>Newest browsers, MultiDrag: Touchscreen, you can drag many cards at once with each finger.
+    Use case: Many users can drag their own card at big touch screen. Or one user can drag many cards.
+    There is not any kanban software with MultiDrag feature yet.
+  </li>
+  <li>Ladybird, OneDrag: Touchscreen, drag only one card at once. Is it possible to get MultiDrag?</li>
+  <li>Legacy Browsers: Uses HTML4 tables, and GIF image for rounded corners, to be visible at Netsurf and Amiga IBrowse.
+    No drag drop features, so there will be buttons to move cards.
+  </li>
+</ul> 
+
+<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-1" class="draggable" border-collapse="collapse" background="./- WeKan ®_files/round-blue.gif">
+  <tbody><tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="80" valign="middle" align="top">
+      <font size="3" color="#FFFFFF" face="arial"><p>At touchscreen, you can drag many cards at once</p></font>
+    </td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-2" class="draggable" border-collapse="collapse" background="./- WeKan ®_files/round-blue.gif">
+  <tbody><tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="80" valign="middle" align="top">
+      <font size="3" color="#FFFFFF" face="arial"><p>one with each finger, multiuser</p></font>
+    </td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-3" class="draggable" border-collapse="collapse" background="./- WeKan ®_files/round-blue.gif">
+  <tbody><tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="80" valign="middle" align="top">
+      <font size="3" color="#FFFFFF" face="arial"><p>and also visible at Netsurf and Amiga IBrowse</p></font>
+    </td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+</tbody></table>
+
+<br>
+
+<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-4" class="draggable" border-collapse="collapse" background="./- WeKan ®_files/round-blue.gif">
+  <tbody><tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="80" valign="middle" align="top">
+      <font size="3" color="#FFFFFF" face="arial"><p>Just a prototype tech demo</p></font>
+    </td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+  <tr border="0" padding="0" spacing="0">
+    <td width="20" height="20"></td>
+    <td width="200" height="20"></td>
+    <td width="20" height="20"></td>
+  </tr>
+</tbody></table>
+
+
+<script type="text/javascript">
+    // target elements with the "draggable" class
+    interact('.draggable')
+      .draggable({
+        // enable inertial throwing
+        inertia: true,
+        // keep the element within the area of it's parent
+        modifiers: [
+          interact.modifiers.restrictRect({
+            restriction: 'parent',
+            endOnly: true
+          })
+        ],
+        // enable autoScroll
+        autoScroll: true,
+    
+        listeners: {
+          // call this function on every dragmove event
+          move: dragMoveListener,
+    
+          // call this function on every dragend event
+          end (event) {
+            var textEl = event.target.querySelector('p')
+    
+            textEl && (textEl.textContent =
+              'moved ' +
+              (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+                         Math.pow(event.pageY - event.y0, 2) | 0))
+                .toFixed(0) + 'px from ' +
+                'x' + event.x0.toFixed(0) + '=>' + event.pageX.toFixed(0) +
+                ', y' + event.y0.toFixed(0) + '=>' + event.pageY.toFixed(0));
+          }
+        }
+      })
+    
+    function dragMoveListener (event) {
+      var target = event.target
+      // keep the dragged position in the data-x/data-y attributes
+      var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+      var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+    
+      // translate the element
+      target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+    
+      // update the posiion attributes
+      target.setAttribute('data-x', x)
+      target.setAttribute('data-y', y)
+    }
+    
+    // this function is used later in the resizing and gesture demos
+    window.dragMoveListener = dragMoveListener    
+</script>
+
+</body>
+
+</html>
