@@ -18,7 +18,20 @@
   transform: translate(0px, 0px);
   cursor: move;
   background:url("img/round-blue.gif") top left no-repeat;
-}    
+  outline: none; /* Remove default browser focus outline */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* At active card at, show red border and shadow on focus*/
+#drag-1:focus, #drag-2:focus, #drag-3:focus,
+#drag-4:focus, #drag-5:focus, #drag-6:focus,
+#drag-7:focus, #drag-8:focus, #drag-9:focus,
+#drag-10:focus {
+  border-color: #f00; /* Red border on focus */
+  box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.5); /* Red shadow on focus */
+  height: 100px;
+}
+
 
 /* top + 130px is next position +20 */
 #drag-1  {  position: absolute; top: 300px; left: 10px; }
@@ -95,7 +108,7 @@
   </li>
 </ul> 
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-1" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="1" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-1" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">      
@@ -117,7 +130,7 @@
   </tr>
 </tbody></table>
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-2" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="2" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-2" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">
@@ -139,7 +152,7 @@
   </tr>
 </tbody></table>
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-3" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="3" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-3" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">
@@ -161,7 +174,7 @@
   </tr>
 </tbody></table>
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-4" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="4" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-4" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">
@@ -184,7 +197,7 @@
 </tbody>
 </table>
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-5" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="5" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-5" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">
@@ -207,7 +220,7 @@
 </tbody>
 </table>
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-6" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="6" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-6" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">
@@ -230,7 +243,7 @@
 </tbody>
 </table>
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-7" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="7" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-7" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">
@@ -253,7 +266,7 @@
 </tbody>
 </table>
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-8" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="8" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-8" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">
@@ -276,7 +289,7 @@
 </tbody>
 </table>
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-9" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="9" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-9" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">
@@ -299,7 +312,7 @@
 </tbody>
 </table>
 
-<table style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-10" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<table tabindex="10" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-10" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="200" height="80" valign="middle" align="top">
