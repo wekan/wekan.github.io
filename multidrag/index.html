@@ -326,15 +326,20 @@
     // target elements with the "draggable" class
     interact('.draggable')
       .draggable({
+        // Disabled inertia, because it restricted area where to drag card,
+        //   and returned card to wrong position.
         // enable inertial throwing
-        inertia: true,
-        // keep the element within the area of it's parent
+        //inertia: true, // This is default. Trying to disable it.
+        inertia: false,
+        // keep the element within the area of it's parent. // This is default. Trying to disable it.
+        /*
         modifiers: [
           interact.modifiers.restrictRect({
             restriction: 'parent',
             endOnly: true
           })
         ],
+        */
         // enable autoScroll
         autoScroll: true,
     
