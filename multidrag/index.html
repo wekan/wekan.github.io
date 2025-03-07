@@ -45,9 +45,17 @@
 #drag-9  {  position: absolute; top: 690px; left: 260px; }
 #drag-10 {  position: absolute; top: 820px; left: 260px; }
 
-
 .draggable {
   touch-action: none;
+}
+
+.redlines {
+  position: fixed; /* or position: absolute */
+  top: 440px;
+  left: 150px;
+  width: 50px;
+  height: 2px;
+  pointer-events: none; /* so that below cards can be clicked */
 }
   </style>
 
@@ -334,6 +342,12 @@
   </tr>
 </tbody>
 </table>
+
+<div class="redlines">
+  <svg height="210" width="500">
+    <line x1="0" y1="0" x2="270" y2="150" style="stroke:rgb(255,0,0);stroke-width:2" />
+  </svg>
+</div>
 
 <script type="text/javascript">
     // target elements with the "draggable" class
