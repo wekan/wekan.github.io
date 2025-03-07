@@ -12,12 +12,17 @@
 #drag-1, #drag-2, #drag-3, #drag-4, #drag-5,
 #drag-6, #drag-7, #drag-8, #drag-9, #drag-10 {
   color: white;
-  margin: 1rem 0 0 1rem;
+  /* margin: 1rem 0 0 1rem; */
   touch-action: none;
   user-select: none;
   transform: translate(0px, 0px);
   cursor: move;
-  background:url("img/round-blue.gif") top left no-repeat;
+  background-color: #5e98c2;
+  border-radius: 25px;
+  padding: 20px;
+  /* background GIF produces dithered background at Amiga IBrowse, so better to use
+  table background color to get solid color
+    background:url("img/round-blue.gif") top left no-repeat; */
   outline: none; /* Remove default browser focus outline */
   transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
@@ -29,7 +34,7 @@
 #drag-10:focus {
   border-color: #f00; /* Red border on focus */
   box-shadow: 0 0 0 5px rgba(255, 0, 0, 0.5); /* Red shadow on focus */
-  height: 100px;
+  height: 60px;
 }
 
 
@@ -116,100 +121,121 @@
   </li>
 </ul> 
 
-<table tabindex="1" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-1" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<!-- Background GIF produces dithered background at Amiga IBrowse,
+ so better to use table background color to get solid color:
+   table background="img/round-blue.gif" => table bgcolor="#5e98c2"
+ But this causes card to not have rounded corners at Netsurf and Amiga IBrowse.
+  So, to have rounded corners at Netsurf and Amiga IBrowse, use background GIF.
+-->
+
+<table bgcolor="#5e98c2" tabindex="1" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-1" class="draggable"
+  border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">      
-      <font size="3" color="#FFFFFF" face="arial">
-        <b>At touchscreen, you can drag many cards at once</b>
+    <td width="160" height="40" valign="middle" align="top">      
+      <font size="1" color="#FFFFFF" face="arial">
+        <b>At touchscreen</b>
         <p></p></font>
     </td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody></table>
 
-<table tabindex="2" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-2" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<br>
+
+<table bgcolor="#5e98c2" tabindex="2" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-2" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">
-      <font size="3" color="#FFFFFF" face="arial">
-        <b>One with each finger, multiuser</b>
+    <td width="160" height="40" valign="middle" align="top">
+      <font size="1" color="#FFFFFF" face="arial">
+        <b>Drag many at once</b>
         <p></p></font>
     </td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody></table>
 
-<table tabindex="3" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-3" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<br>
+
+<table bgcolor="#5e98c2" tabindex="3" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-3" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">
-      <font size="3" color="#FFFFFF" face="arial">
-        <b>and also visible at Netsurf and Amiga IBrowse</b>
+    <td width="160" height="40" valign="middle" align="top">
+      <font size="1" color="#FFFFFF" face="arial">
+        <b>Visible at Netsurf</b>
         <p></p></font>
     </td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody></table>
 
-<table tabindex="4" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-4" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<br>
+
+<table bgcolor="#5e98c2" tabindex="4" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-4" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">
-      <font size="3" color="#FFFFFF" face="arial">
-        <b>Just a prototype tech demo</b>
+    <td width="160" height="40" valign="middle" align="top">
+      <font size="1" color="#FFFFFF" face="arial">
+        <b>and Amiga IBrowse</b>
         <p></p></font>
     </td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody>
 </table>
 
-<table tabindex="5" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-5" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<br>
+
+<table bgcolor="#5e98c2" tabindex="5" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-5" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">
-      <font size="3" color="#FFFFFF" face="arial">
+    <td width="160" height="40" valign="middle" align="top">
+      <font size="1" color="#FFFFFF" face="arial">
         <b>For all browsers</b>
         <p></p></font>
     </td>
@@ -217,22 +243,25 @@
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody>
 </table>
 
-<table tabindex="6" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-6" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<br>
+
+<table bgcolor="#5e98c2" tabindex="6" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-6" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">
-      <font size="3" color="#FFFFFF" face="arial">
+    <td width="160" height="40" valign="middle" align="top">
+      <font size="1" color="#FFFFFF" face="arial">
         <b>And all screen sizes</b>
         <p></p></font>
     </td>
@@ -240,45 +269,51 @@
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody>
 </table>
 
-<table tabindex="7" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-7" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<br>
+
+<table bgcolor="#5e98c2" tabindex="7" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-7" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">
-      <font size="3" color="#FFFFFF" face="arial">
-        <b>And all operating systems</b>
+    <td width="160" height="40" valign="middle" align="top">
+      <font size="1" color="#FFFFFF" face="arial">
+        <b>And all OS</b>
         <p></p></font>
     </td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody>
 </table>
 
-<table tabindex="8" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-8" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<br>
+
+<table bgcolor="#5e98c2" tabindex="8" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-8" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">
-      <font size="3" color="#FFFFFF" face="arial">
+    <td width="160" height="40" valign="middle" align="top">
+      <font size="1" color="#FFFFFF" face="arial">
         <b>And CPUs</b>
         <p></p></font>
     </td>
@@ -286,62 +321,70 @@
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody>
 </table>
 
-<table tabindex="9" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-9" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<br>
+
+<table bgcolor="#5e98c2" tabindex="9" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-9" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">
-      <font size="3" color="#FFFFFF" face="arial">
-        <b>For all devices at Earth</b>
+    <td width="160" height="40" valign="middle" align="top">
+      <font size="1" color="#FFFFFF" face="arial">
+        <b>At Earth</b>
         <p></p></font>
     </td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody>
 </table>
 
-<table tabindex="10" style="border-collapse: collapse;" width="240" height="190" border="0" padding="0" spacing="0" id="drag-10" class="draggable" border-collapse="collapse" background="img/round-blue.gif">
+<br>
+
+<table bgcolor="#5e98c2" tabindex="10" style="border-collapse: collapse;" width="200" height="80"
+ border="0" padding="0" spacing="0" id="drag-10" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="80" valign="middle" align="top">
-      <font size="3" color="#FFFFFF" face="arial">
-        <b>And for all devices at Space</b>
+    <td width="160" height="40" valign="middle" align="top">
+      <font size="1" color="#FFFFFF" face="arial">
+        <b>And Space</b>
         <p></p></font>
     </td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
   <tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
-    <td width="200" height="20"></td>
+    <td width="160" height="20"></td>
     <td width="20" height="20"></td>
   </tr>
 </tbody>
 </table>
+
+<br>
 
 <div class="redlines">
   <svg height="210" width="500">
