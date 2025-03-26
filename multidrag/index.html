@@ -22,7 +22,6 @@ v\:* {
   user-select: none;
   transform: translate(0px, 0px);
   cursor: move;
-  background-color: #5e98c2;
   border-radius: 25px;
   padding: 20px;
   /* background GIF produces dithered background at Amiga IBrowse, so better to use
@@ -43,12 +42,12 @@ v\:* {
 }
 
 
-/* top + 130px is next position +20 */
-#drag-1  {  position: absolute; top: 300px; left: 10px; }
-#drag-2  {  position: absolute; top: 430px; left: 10px; }
+/* top + 130px is next position +20 ... background-color: #5e98c2; */
+#drag-1  {  position: absolute; top: 300px; left: 10px;}
+#drag-2  {  position: absolute; top: 430px; left: 10px;}
 #drag-3  {  position: absolute; top: 560px; left: 10px; }
-#drag-4  {  position: absolute; top: 690px; left: 10px; }
-#drag-5  {  position: absolute; top: 820px; left: 10px; }
+#drag-4  {  position: absolute; top: 690px; left: 10px;}
+#drag-5  {  position: absolute; top: 820px; left: 10px;}
 #drag-6  {  position: absolute; top: 300px; left: 260px; }
 #drag-7  {  position: absolute; top: 430px; left: 260px; }
 #drag-8  {  position: absolute; top: 560px; left: 260px; }
@@ -131,15 +130,22 @@ v\:* {
    table background="img/round-blue.gif" => table bgcolor="#5e98c2"
  But this causes card to not have rounded corners at Netsurf and Amiga IBrowse.
   So, to have rounded corners at Netsurf and Amiga IBrowse, use background GIF.
--->
 
-<table bgcolor="#5e98c2" tabindex="1" style="border-collapse: collapse;" width="200" height="80"
+valid_colors = ['white', 'green', 'yellow', 'orange', 'red', 'purple', 'blue', 'sky', 'lime', 'pink', 'black',
+                    'silver', 'peachpuff', 'crimson', 'plum', 'darkgreen', 'slateblue', 'magenta', 'gold', 'navy',
+                    'gray', 'saddlebrown', 'paleturquoise', 'mistyrose', 'indigo']
+
+
+<table bgcolor="#5e98c2"
+  -->
+
+<table bgcolor="blue" tabindex="1" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-1" class="draggable"
   border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">      
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="white" face="arial">
         <b>At touchscreen</b>
         <p></p></font>
     </td>
@@ -159,12 +165,12 @@ v\:* {
 
 <br>
 
-<table bgcolor="#5e98c2" tabindex="2" style="border-collapse: collapse;" width="200" height="80"
+<table bgcolor="green" tabindex="2" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-2" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="white" face="arial">
         <b>Drag many at once</b>
         <p></p></font>
     </td>
@@ -184,12 +190,12 @@ v\:* {
 
 <br>
 
-<table bgcolor="#5e98c2" tabindex="3" style="border-collapse: collapse;" width="200" height="80"
+<table bgcolor="red" tabindex="3" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-3" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="white" face="arial">
         <b>Visible at Netsurf</b>
         <p></p></font>
     </td>
@@ -209,12 +215,12 @@ v\:* {
 
 <br>
 
-<table bgcolor="#5e98c2" tabindex="4" style="border-collapse: collapse;" width="200" height="80"
+<table bgcolor="yellow" tabindex="4" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-4" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="black" face="arial">
         <b>and Amiga IBrowse</b>
         <p></p></font>
     </td>
@@ -235,12 +241,12 @@ v\:* {
 
 <br>
 
-<table bgcolor="#5e98c2" tabindex="5" style="border-collapse: collapse;" width="200" height="80"
+<table bgcolor="gray" tabindex="5" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-5" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="white" face="arial">
         <b>For all browsers</b>
         <p></p></font>
     </td>
@@ -261,12 +267,12 @@ v\:* {
 
 <br>
 
-<table bgcolor="#5e98c2" tabindex="6" style="border-collapse: collapse;" width="200" height="80"
+<table bgcolor="black" tabindex="6" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-6" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="white" face="arial">
         <b>And all screen sizes</b>
         <p></p></font>
     </td>
@@ -287,12 +293,12 @@ v\:* {
 
 <br>
 
-<table bgcolor="#5e98c2" tabindex="7" style="border-collapse: collapse;" width="200" height="80"
+<table bgcolor="cyan" tabindex="7" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-7" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="black" face="arial">
         <b>And all OS</b>
         <p></p></font>
     </td>
@@ -313,12 +319,12 @@ v\:* {
 
 <br>
 
-<table bgcolor="#5e98c2" tabindex="8" style="border-collapse: collapse;" width="200" height="80"
+<table bgcolor="pink" tabindex="8" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-8" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="black" face="arial">
         <b>And CPUs</b>
         <p></p></font>
     </td>
@@ -339,12 +345,12 @@ v\:* {
 
 <br>
 
-<table bgcolor="#5e98c2" tabindex="9" style="border-collapse: collapse;" width="200" height="80"
+<table bgcolor="orange" tabindex="9" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-9" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="white" face="arial">
         <b>At Earth</b>
         <p></p></font>
     </td>
@@ -365,12 +371,12 @@ v\:* {
 
 <br>
 
-<table bgcolor="#5e98c2" tabindex="10" style="border-collapse: collapse;" width="200" height="80"
+<table bgcolor="lightblue" tabindex="10" style="border-collapse: collapse;" width="200" height="80"
  border="0" padding="0" spacing="0" id="drag-10" class="draggable" border-collapse="collapse">
   <tbody><tr border="0" padding="0" spacing="0">
     <td width="20" height="20"></td>
     <td width="160" height="40" valign="middle" align="top">
-      <font size="1" color="#FFFFFF" face="arial">
+      <font size="1" color="black" face="arial">
         <b>And Space</b>
         <p></p></font>
     </td>
