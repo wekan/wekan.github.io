@@ -1,3 +1,3 @@
-## wekan.fi website
+## wekan.github.io website
 
-At https://wekan.fi
+Redirecting to https://wekan.fi
