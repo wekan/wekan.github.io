@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Myth of Dying Programming Language and Framework | Wekan Blog</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="/wp-content/themes/twentytwelve/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Wekan Blog &raquo; Feed" href="../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Wekan Blog &raquo; Comments Feed" href="../../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='../../../wp-content/themes/twentytwelve/fonts/font-open-sans.css?ver=20230328' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='../../../wp-content/themes/twentytwelve/style.css?ver=20240716' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='../../../wp-content/themes/twentytwelve/css/blocks.css?ver=20240603' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/wp-content/themes/twentytwelve/css/ie.css?ver=20150214' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel='prev' title='Upcoming Wekan v1.00 and Platforms' href='../upcoming-wekan-v1-00-and-platforms/index.html' />
+<link rel='next' title='Wekan v1.00 released' href='../wekan-v1-00-released/index.html' />
+<link rel="canonical" href="index.html" />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fthis_will_be_replaced_by_sandstorm%3A10000%2F2018%2F05%2Fmyth-of-dying-programming-language-and-framework%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fthis_will_be_replaced_by_sandstorm%3A10000%2F2018%2F05%2Fmyth-of-dying-programming-language-and-framework%2F&#038;format=xml" />
+<meta name="robots" content="index, follow"></head>
+
+<body class="post-template-default single single-post postid-190 single-format-standard custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header">
+		<hgroup>
+			<h1 class="site-title"><a href="../../../index.html" rel="home">Wekan Blog</a></h1>
+			<h2 class="site-description">Implementing kanban method</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html#content">Skip to content</a>
+			<div class="nav-menu"><ul>
+<li ><a href="../../../index.html">Home</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="../../../index.html"><img src="../../../wp-content/uploads/2018/02/wekan-blog-header-2.png" width="940" height="198" alt="Wekan Blog" class="header-image" srcset="../../../wp-content/uploads/2018/02/wekan-blog-header-2.png 940w, ../../../wp-content/uploads/2018/02/wekan-blog-header-2-300x63.png 300w, ../../../wp-content/uploads/2018/02/wekan-blog-header-2-768x162.png 768w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-190" class="post-190 post type-post status-publish format-standard hentry category-development-progress">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Myth of Dying Programming Language and Framework</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><span id="more-190"></span></p>
+<h2>1) Myth of Dying Programming Language</h2>
+<ul>
+<li><a href="https://www.quora.com/Are-PHP-and-Ruby-dead">Are PHP and Ruby dead?</a></li>
+<li><a href="https://www.quora.com/Did-Python-cause-R-to-slowly-die">Did Python cause R to slowly die?</a></li>
+<li><a href="https://www.quora.com/Is-Java-dying-at-the-hands-of-Oracle-What-future-is-there-for-Java">Is Java dying at the hands of Oracle? What future is there for Java?</a></li>
+<li><a href="https://www.quora.com/Is-NET-and-C-dying">Is .NET and C# dying?</a></li>
+<li><a href="https://www.quora.com/When-will-the-mainframe-and-COBOL-die">When will the mainframe and COBOL die?</a></li>
+<li><a href="https://www.quora.com/Is-Visual-Basic-dead-already">Is Visual Basic dead already?</a></li>
+<li><a href="https://www.quora.com/Is-C-C++-Assembly-dying">Is C/C++/Assembly dying?</a></li>
+<li><a href="https://www.quora.com/Is-Javascript-dying">Is Javascript dying?</a></li>
+</ul>
+<p>Really? Programming language dies, when somebody deletes all code and documentation files and backups of files, books, papers etc from everywhere in the world. I hope you are not serious. Do you know how much time was used to create all that, from nothing, from first computers, to all those low to high level programming languages, and software? Do you know how much value is in all that existing code and software already? Would all of the world work without some of the software? When some company looses all their code they use to run their business, they are out of business. They have nothing, it&#8217;s all vaporware.</p>
+<h2>2) Myth of Dying Web Framework</h2>
+<ul>
+<li><a href="https://www.quora.com/Is-Angular-dying">Is Angular Dying?</a></li>
+<li><a href="https://www.quora.com/Is-React-killing-Angular">Is React Killing Angular?</a></li>
+<li><a href="https://news.ycombinator.com/item?id=16782266">Is Meteor.js Dead?</a></li>
+<li><a href="https://www.quora.com/Is-ASP-NET-dead">Is ASP.NET dead?</a></li>
+<li><a href="https://www.quora.com/Will-ASP-NET-MVC-die-soon">Will ASP.NET MVC die soon?</a></li>
+<li><a href="https://www.quora.com/Is-React-js-dead-1">Is React.js dead?</a></li>
+<li><a href="https://www.quora.com/Is-React-Native-dead">Is React Native dead?</a></li>
+</ul>
+<p>Really? If someone, anywhere in the world, has a copy of those frameworks code and documentation, and has implemented some software in some framework, then it&#8217;s not dead yet.</p>
+<p>Currently Wekan has <a href="https://github.com/wekan/wekan">3M docker pulls in Docker Hub</a>. Many companies around the world have integrated Wekan to their internal systems, and have countless of integrations to their own systems, to run their business. It has been <a href="https://github.com/wekan/wekan/wiki/FAQ#can-wekan-be-rewritten-in-another-programming-language">5 year effort to implement Wekan</a>. And many years of effort of other companies to integrate Wekan to their own systems.</p>
+<p>Wekan code is clearly organized like this <a href="https://github.com/wekan/wekan/tree/devel/client/components">wekan/client/componens</a> directory. If you read the source code, you can figure out how to add a feature or bugfix to Wekan. That&#8217;s how I did it. The value is in being able to fix the software I am using myself, scratching my own itch. Sometimes someone even uses my <a href="https://wekan.github.io">Commercial Support of Wekan</a> so I can implement their feature or fix in Wekan.</p>
+<h2>What is actually happening to programming languages and frameworks</h2>
+<p>Programming languages are getting faster all the time:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Source-to-source_compiler">Source-to-source compilers</a> that let you for example <a href="https://github.com/google/grumpy">still use Python, and convert it to faster Go for production</a>.</li>
+<li>Executing of programs in all programming languages is getting faster, because optimizations and fixes for bottlenecks are done to most used programming languages to improve scalability</li>
+</ul>
+<p>All of this is going on all the time, all over the world, to have most used software supported, upgraded, and secure. If some framework does not have security updates coming anymore, software should be kept in internal network, firewalled, and off the Internet. But software that does not receive security updates is not dead yet, because that software can still be in use.</p>
+<h2>More</h2>
+<ul>
+<li>Supporting all current software and keeping it secure: <a href="https://twit.tv/shows/floss-weekly/episodes/478?autostart=false">FLOSS478 OWASP Dependency-Track</a></li>
+<li><a href="https://www.legacycode.rocks">Legacy Code Rocks</a></li>
+</ul>
+<hr />
+<p><a href="https://news.ycombinator.com/item?id=17054264">Discuss at Hacker News</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="../../../category/development-progress/index.html" rel="category tag">Development Progress</a> on <a href="index.html" title="17:06" rel="bookmark"><time class="entry-date" datetime="2018-05-12T17:06:52+00:00">2018-05-12</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/9290707ac9677a901ffa675675b58357/index.html" title="View all posts by Lauri Ojansivu" rel="author">Lauri Ojansivu</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../upcoming-wekan-v1-00-and-platforms/index.html" rel="prev"><span class="meta-nav">&larr;</span> Upcoming Wekan v1.00 and Platforms</a></span>
+					<span class="nav-next"><a href="../wekan-v1-00-released/index.html" rel="next">Wekan v1.00 released <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+					<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="../../../2023/01/foss-levels-up-everyone/index.html">FOSS levels up everyone</a>
+									</li>
+											<li>
+					<a href="../../../2020/06/maximum-transparency/index.html">Maximum transparency</a>
+									</li>
+											<li>
+					<a href="../../../2020/06/results-of-wekan-survey-2020-01/index.html">Results of Wekan Survey 2020-01</a>
+									</li>
+											<li>
+					<a href="../../../2019/09/illusion-of-differences-between-operating-systems-programming-languages-and-web-frameworks/index.html">Illusion of differences between Operating Systems, Programming Languages and Web Frameworks</a>
+									</li>
+											<li>
+					<a href="../../../2019/06/wekan-on-raspi3-and-arm64-server-now-works-and-whats-next-with-cncf/index.html">Wekan on RasPi3 and arm64 server now works, and what&#8217;s next with CNCF</a>
+									</li>
+					</ul>
+		</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='../../../2023/01/index.html'>January 2023</a></li>
+	<li><a href='../../../2020/06/index.html'>June 2020</a></li>
+	<li><a href='../../../2019/09/index.html'>September 2019</a></li>
+	<li><a href='../../../2019/06/index.html'>June 2019</a></li>
+	<li><a href='../../../2019/04/index.html'>April 2019</a></li>
+	<li><a href='../../../2019/01/index.html'>January 2019</a></li>
+	<li><a href='../../11/index.html'>November 2018</a></li>
+	<li><a href='../../10/index.html'>October 2018</a></li>
+	<li><a href='../../09/index.html'>September 2018</a></li>
+	<li><a href='../../07/index.html'>July 2018</a></li>
+	<li><a href='../index.html'>May 2018</a></li>
+	<li><a href='../../02/index.html'>February 2018</a></li>
+	<li><a href='../../01/index.html'>January 2018</a></li>
+	<li><a href='../../../2017/12/index.html'>December 2017</a></li>
+		</ul>
+		</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='../../../wp-content/themes/twentytwelve/js/navigation.js?ver=20141205'></script>
+<script type='text/javascript' src='../../../wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+</body>
+</html>

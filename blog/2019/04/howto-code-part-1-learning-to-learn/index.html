@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Howto code part 1: Learning to learn | Wekan Blog</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="/wp-content/themes/twentytwelve/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Wekan Blog &raquo; Feed" href="../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Wekan Blog &raquo; Comments Feed" href="../../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='../../../wp-content/themes/twentytwelve/fonts/font-open-sans.css?ver=20230328' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='../../../wp-content/themes/twentytwelve/style.css?ver=20240716' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='../../../wp-content/themes/twentytwelve/css/blocks.css?ver=20240603' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/wp-content/themes/twentytwelve/css/ie.css?ver=20150214' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel='prev' title='Offline part 2: Email and phone' href='../../01/offline-part-2-email-and-phone/index.html' />
+<link rel='next' title='Wekan on RasPi3 and arm64 server now works, and what&#8217;s next with CNCF' href='../../06/wekan-on-raspi3-and-arm64-server-now-works-and-whats-next-with-cncf/index.html' />
+<link rel="canonical" href="index.html" />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fthis_will_be_replaced_by_sandstorm%3A10000%2F2019%2F04%2Fhowto-code-part-1-learning-to-learn%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fthis_will_be_replaced_by_sandstorm%3A10000%2F2019%2F04%2Fhowto-code-part-1-learning-to-learn%2F&#038;format=xml" />
+<meta name="robots" content="index, follow"></head>
+
+<body class="post-template-default single single-post postid-338 single-format-standard custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header">
+		<hgroup>
+			<h1 class="site-title"><a href="../../../index.html" rel="home">Wekan Blog</a></h1>
+			<h2 class="site-description">Implementing kanban method</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html#content">Skip to content</a>
+			<div class="nav-menu"><ul>
+<li ><a href="../../../index.html">Home</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="../../../index.html"><img src="../../../wp-content/uploads/2018/02/wekan-blog-header-2.png" width="940" height="198" alt="Wekan Blog" class="header-image" srcset="../../../wp-content/uploads/2018/02/wekan-blog-header-2.png 940w, ../../../wp-content/uploads/2018/02/wekan-blog-header-2-300x63.png 300w, ../../../wp-content/uploads/2018/02/wekan-blog-header-2-768x162.png 768w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-338" class="post-338 post type-post status-publish format-standard hentry category-howto-code">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Howto code part 1: Learning to learn</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Idea to this article series came when I tried to help someone at some programming course. This article is about programming in general, and some examples.</p>
+<p><span id="more-338"></span></p>
+<h2>1. Shutdown computer, and write the recipe with pen and paper</h2>
+<p>Computer works by making series of steps, like when you are <strong>designing and cooking new kind of food, that is your special mix</strong>. You need to plan it first, or it does not taste good.</p>
+<p>Steps need to be as small as possible. So small steps, that a small child can understand. We are making birthday cake, and it&#8217;s going to be fun. It&#8217;s a new cake, and it&#8217;s going to be delicious. Yes, it takes some time. We need to design how it looks, what it has inside and where, and how it works step by step.</p>
+<p><strong>Most important is to try to do these steps yourself</strong>. You are learning to code. It&#8217;s like you are learning to cook, walk, drive bike, or anything. Try to do most of the steps yourself, so that you learn that new programming language, and you can do the work. Relax, try to think, try alternative ways how to make it work. Don&#8217;t be in a hurry, this does take time, like cooking takes time, the end result is worth it.</p>
+<p>Yes, coding takes some time. The point is not to memorize everything, nobody does that. You need to read enough documentation and code to understand how to get to the next step. No one can remember all syntax and all steps of everything. You can only remember couple things in your head, and soon you will forget it. You should write comments to that code, your recipe, and under each small recipe step write the code that does that small step. That way you can read later how it works, because you will forget it how that code works. Code comments are for everyone using that code, because written code is read many times later.</p>
+<h2>2. Example 1: Word game.</h2>
+<h3><strong>1. General idea</strong></h3>
+<ol>
+<li>Quess a word: Someone went to shop to get ingredients for cake and did buy _________ and ______ for making a cake. Alternatives of answer: flour, cream, bubble gum, shoes.</li>
+<li>Game checks answer. For every correct answer, player gets one point.</li>
+</ol>
+<h3><strong>2. How it should look (UI design)</strong></h3>
+<ol>
+<li>Draw to paper how it should look at each step. Text, images or image names, using very simple line drawing.</li>
+<li>What text, images, etc should be displayed first.</li>
+<li>Draw arrows where user should type text or click.</li>
+<li>Draw and write next screen what happens next, if answer is correct.</li>
+<li>Draw and write next screen what happens next, if answer not correct.</li>
+<li>Draw results screen, etc all possible what can be shown.</li>
+</ol>
+<h3><strong>3. Write recipe, how the code should work step by step</strong></h3>
+<p>You can use any words to write recipe, because you will change that recipe to be more exact as time goes on. Recipe will be in comments in small steps, and below each step is small amount of code that does that step.</p>
+<p>Recipe example (algorithm) in small steps:</p>
+<ol>
+<li>There is text file questions.csv. CSV means comma separated values. Example:
+<pre>question1,correctword1,correctword2,wrongword1,wrongword2
+question2,correctword1,correctword2,wrongword1,wrongword2</pre>
+</li>
+<li>Read fist line of questions.csv.</li>
+<li>Separate each comma separated value to different variable. Variable is something that has a name and value. For examle, cakename=&#8221;birthday cake&#8221;, correctword1=&#8221;flour&#8221;, strawberries=10.</li>
+<li>Replace in text question1 word correctword1 with text _________</li>
+<li>Replace in text question2 word correctword1 with text _________</li>
+<li>Ask question1 by printing question to display.</li>
+<li>Check is the answer1 same as correctword1. If yes, add one point. Print result to screen.</li>
+<li>Check is the answer2 same as correctword2. If yes, add one point. Print result to screen.</li>
+<li>Ask next question at next line, goto step 1.</li>
+</ol>
+<h3><strong>4. Find out where programming language documentation is</strong></h3>
+<p>Google search for programming language documentation. This is most important. Example search:</p>
+<ul>
+<li>___programming_language___  documentation</li>
+<li>___framework_name____ documentation</li>
+<li>___framework_name____ directory structure</li>
+<li>___database_name____ documentation</li>
+<li>___something____ GitHub. But you can only use that code if there is some license. You can search what license means at <a href="https://tldrlegal.com">https://tldrlegal.com</a> what license requires, for example if you use it, you need to include also that license text to your code, and what else is allowed. If there is not any license that gives enough permissions, you can not use the code, it&#8217;s propietary (closed source).</li>
+</ul>
+<p>In documentation, you can find this kind of info:</p>
+<ul>
+<li>How it&#8217;s possible to do something to text, images, files, etc</li>
+<li>How to search something</li>
+<li>How to download file from website with code</li>
+<li>How to upload file with code</li>
+<li>How to use ready-made code library to do something big with just couple lines of code.</li>
+<li>You can search documentation about something you want to do with that programming language code.</li>
+</ul>
+<p>Also Google search for code examples. But some of the results can be wrong, or old, or does not work with newest code framework, so it&#8217;s still best to use official documentation as mentioned above. Some example Google searches below:</p>
+<ul>
+<li>how to read csv file in __programming_language_name___</li>
+<li>how to read from __database_name__  using __programming_language_name___</li>
+<li>how to write to _____ using  __programming_language_name___</li>
+</ul>
+<h3><strong>4. How to write code</strong></h3>
+<ol>
+<li>Take first step of recipe. Write down all steps you have done when you try to make it work. You are following some path in cyberspace labyrinth to get to destination. Sometimes when some way does not work, you need to go back a little and try a different way to make it work. Or you need to try all possible ways to make it work. Also remember to eat, sleep, etc. Take some breaks for example every 30 mins stretching. It&#8217;s easy to get lost in cyberspace, try to find your way back too.</li>
+<li>Try small amount of new code, and try to make it work. Make different code directories with names about what each small part of code does. And then combine those code parts to your main code.</li>
+<li>If you don&#8217;t find how to code some step, you need to divide that step into much smaller steps, so small that there is some code example for that, trying to explain to computer so that it can do that. Computer can only do exact steps.</li>
+<li>It&#8217;s normal that code is wrong. Just keep fixing it. When you run code, it usually says where error is. Copy that error to Google search, usually there is explained how to fix it. If you have time, try different ways to search Google for answer, so you would not need to ask anyone how to code something.</li>
+<li>If you are in a hurry, or can&#8217;t find how to fix it, try to find some forum or mailing list or chat for that programming language, framework, database, or GitHub issue. Try to search is there any answer to it already. Try to find some correct place where to ask it, because if you ask at wrong place, they probably don&#8217;t know answer. If you find correct place, there you can ask question how to do something. Usually someone answers how to do it, or tells where is documentation or some other place where to find more information. If you have bug, you will be asked to try to make smallest code example where that bug happens. Yes, any code can have bugs somewhere.</li>
+<li>When asking questions, try to ask</li>
+<li>After some time of fixing, then your code works. It feels great. You did it ! You can also read <a href="https://wekan.github.io/blog/2018/05/wekan-v1-00-released/index.html">what some newbie Wekan contributor did feel after adding features to Wekan</a>.</li>
+<li>And after you get feedback about your code, there is more bugs and feature request. And you keep fixing it and adding features. And that is what programming is all about.</li>
+</ol>
+<h2>3. Example 2: Adding search to Wekan Admin Panel People page</h2>
+<h3><strong>General info about installing and using Wekan</strong></h3>
+<p><a href="https://github.com/wekan/wekan/blob/master/README.md#requirements">https://github.com/wekan/wekan/blob/master/README.md#requirements</a></p>
+<p><a href="https://github.com/wekan/wekan-snap/wiki/Install">https://github.com/wekan/wekan-snap/wiki/Install</a></p>
+<p>Default: node port 3001, mongodb port 27019<br />
+<a href="https://github.com/wekan/wekan-snap/wiki/Supported-settings-keys">https://github.com/wekan/wekan-snap/wiki/Supported-settings-keys</a></p>
+<p><a href="https://github.com/wekan/wekan/wiki/Settings">https://github.com/wekan/wekan/wiki/Settings</a></p>
+<p>/var/snap/wekan/common/Caddyfile<br />
+<a href="https://github.com/wekan/wekan/wiki/Caddy-Webserver-Config">https://github.com/wekan/wekan/wiki/Caddy-Webserver-Config</a></p>
+<p><a href="https://github.com/wekan/wekan/wiki/Adding-users">https://github.com/wekan/wekan/wiki/Adding-users</a></p>
+<p><a href="https://github.com/wekan/wekan/wiki/Backup">https://github.com/wekan/wekan/wiki/Backup</a></p>
+<h3><strong>Coding info for Wekan</strong></h3>
+<p>Also see all repos at <a href="https://github.com/wekan">https://github.com/wekan</a></p>
+<ol>
+<li>Source Linux/Mac/Windows Subsystem for Linux Ubuntu</li>
+</ol>
+<ul>
+<li><a href="https://github.com/wekan/wekan/wiki/Source">https://github.com/wekan/wekan/wiki/Source</a></li>
+<li><a href="https://github.com/wekan/wekan">https://github.com/wekan/wekan</a></li>
+<li><code>./rebuild-wekan.sh</code> 1 install dependencies 2 build wekan</li>
+<li><code>./start-wekan.sh</code> where <code>cd .build/bundle</code> <a href="https://github.com/wekan/wekan/blob/master/start-wekan.sh#L22">here</a> and <code>node main.js</code> <a href="https://github.com/wekan/wekan/blob/master/start-wekan.sh#L308">here</a>.</li>
+<li>Mac <a href="https://github.com/wekan/wekan/wiki/Mac">https://github.com/wekan/wekan/wiki/Mac</a></li>
+</ul>
+<ol start="2">
+<li><a href="https://github.com/wekan/wekan/wiki/Directory-Structure">https://github.com/wekan/wekan/wiki/Directory-Structure</a></li>
+<li><a href="https://github.com/wekan/wekan/wiki/Developer-Documentation">https://github.com/wekan/wekan/wiki/Developer-Documentation</a></li>
+</ol>
+<h3>Snap Linux</h3>
+<p><a href="https://snapcraft.io/" rel="nofollow">https://snapcraft.io</a><br />
+<a href="https://docs.snapcraft.io/snap-documentation/3781" rel="nofollow">https://docs.snapcraft.io/snap-documentation/3781</a></p>
+<pre><code>wekan/snapcraft.yaml
+wekan/snap-src/
+wekan/snap/
+wekan/releases/release-snap.sh
+</code></pre>
+<h3>Docker Linux/Mac/Windows</h3>
+<p><a href="https://github.com/wekan/wekan/wiki/Install-Wekan-from-source-on-Windows">https://github.com/wekan/wekan/wiki/Install-Wekan-from-source-on-Windows</a><br />
+<a href="https://github.com/wekan/wekan/wiki/Docker">https://github.com/wekan/wekan/wiki/Docker</a></p>
+<pre><code>wekan/Dockerfile
+wekan/docker-compose.yml
+</code></pre>
+<h3>Sandstorm / Linux</h3>
+<ul>
+<li><a href="https://sandstorm.io/" rel="nofollow">https://sandstorm.io</a> , install <a href="https://sandstorm.io/install" rel="nofollow">https://sandstorm.io/install</a></li>
+</ul>
+<pre><code>wekan/releases/release-sandstorm.sh
+wekan/sandstorm.js
+wekan/sandstorm-pkgdef.capnp
+</code></pre>
+<ul>
+<li><a href="https://sandstorm.io/news/2017-02-06-sandstorm-returning-to-community-roots" rel="nofollow">https://sandstorm.io/news/2017-02-06-sandstorm-returning-to-community-roots</a></li>
+<li><a href="https://docs.sandstorm.io/en/latest/" rel="nofollow">https://docs.sandstorm.io/en/latest/</a></li>
+<li><a href="https://github.com/sandstorm-io/sandstorm">https://github.com/sandstorm-io/sandstorm</a></li>
+<li><a href="https://sandstormports.github.io/" rel="nofollow">https://sandstormports.github.io</a></li>
+</ul>
+<h3><strong>How to add search to Wekan people page</strong></h3>
+<p>As mentioned at <a href="https://github.com/wekan/wekan/wiki/Developer-Documentation">https://github.com/wekan/wekan/wiki/Developer-Documentation</a></p>
+<p>Wekan has find.sh script for finding code at non-generated code. So first we find code for searching:</p>
+<pre>cd wekan
+./find.sh search</pre>
+<p>Yes, this does bring a lot of code. But there I did also find more exact search term:</p>
+<pre>cd wekan
+./find.sh js-search</pre>
+<p>This does show <strong>.jade</strong> and <strong>.js</strong> files where existing Wekan search code is. CSS is at <strong>.styl</strong> files. So this in then copied to somewhere at wekan/client/components/settings/ where Admin Panel is, to show search input fields at .jade file and have search code at .js file. So today 2019-04-19 Wekan contributor Akuket did ask about this search feature, so I did tell how to find this code so that Akuket then implemented search for people and <a href="https://github.com/wekan/wekan/pull/2346">added pull request to Wekan</a>.</p>
+<p>BR,<br />
+xet7</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="../../../category/howto-code/index.html" rel="category tag">Howto code</a> on <a href="index.html" title="16:13" rel="bookmark"><time class="entry-date" datetime="2019-04-19T16:13:32+00:00">2019-04-19</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/9290707ac9677a901ffa675675b58357/index.html" title="View all posts by Lauri Ojansivu" rel="author">Lauri Ojansivu</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../../01/offline-part-2-email-and-phone/index.html" rel="prev"><span class="meta-nav">&larr;</span> Offline part 2: Email and phone</a></span>
+					<span class="nav-next"><a href="../../06/wekan-on-raspi3-and-arm64-server-now-works-and-whats-next-with-cncf/index.html" rel="next">Wekan on RasPi3 and arm64 server now works, and what&#8217;s next with CNCF <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+					<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="../../../2023/01/foss-levels-up-everyone/index.html">FOSS levels up everyone</a>
+									</li>
+											<li>
+					<a href="../../../2020/06/maximum-transparency/index.html">Maximum transparency</a>
+									</li>
+											<li>
+					<a href="../../../2020/06/results-of-wekan-survey-2020-01/index.html">Results of Wekan Survey 2020-01</a>
+									</li>
+											<li>
+					<a href="../../09/illusion-of-differences-between-operating-systems-programming-languages-and-web-frameworks/index.html">Illusion of differences between Operating Systems, Programming Languages and Web Frameworks</a>
+									</li>
+											<li>
+					<a href="../../06/wekan-on-raspi3-and-arm64-server-now-works-and-whats-next-with-cncf/index.html">Wekan on RasPi3 and arm64 server now works, and what&#8217;s next with CNCF</a>
+									</li>
+					</ul>
+		</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='../../../2023/01/index.html'>January 2023</a></li>
+	<li><a href='../../../2020/06/index.html'>June 2020</a></li>
+	<li><a href='../../09/index.html'>September 2019</a></li>
+	<li><a href='../../06/index.html'>June 2019</a></li>
+	<li><a href='../index.html'>April 2019</a></li>
+	<li><a href='../../01/index.html'>January 2019</a></li>
+	<li><a href='../../../2018/11/index.html'>November 2018</a></li>
+	<li><a href='../../../2018/10/index.html'>October 2018</a></li>
+	<li><a href='../../../2018/09/index.html'>September 2018</a></li>
+	<li><a href='../../../2018/07/index.html'>July 2018</a></li>
+	<li><a href='../../../2018/05/index.html'>May 2018</a></li>
+	<li><a href='../../../2018/02/index.html'>February 2018</a></li>
+	<li><a href='../../../2018/01/index.html'>January 2018</a></li>
+	<li><a href='../../../2017/12/index.html'>December 2017</a></li>
+		</ul>
+		</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='../../../wp-content/themes/twentytwelve/js/navigation.js?ver=20141205'></script>
+<script type='text/javascript' src='../../../wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+</body>
+</html>

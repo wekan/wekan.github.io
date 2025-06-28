@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Install WeKan ® — Open-Source kanban</title>
+
+    <link rel="icon" href="../wekan-favicon.png">
+    <link rel="shortcut icon" href="../wekan-favicon.png">
+    <link rel="apple-touch-icon" href="../wekan-favicon.png">
+    <link rel="mask-icon" href="../wekan-150.svg">
+    <link rel="alternate" type="application/atom+xml" title="RSS Feed for WeKan ChangeLog" href="https://github.com/wekan/wekan/releases.atom" />
+
+
+    <!-- Bootstrape framework -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+
+    <!-- Use same styles as WeKan board -->
+    <style>
+        body {
+            font: 16px Roboto,Poppins,Helvetica Neue,Arial,Helvetica,sans-serif;
+            background: #dedede;
+        }
+
+        p {
+            font: 14px Roboto,Poppins,Helvetica Neue,Arial,Helvetica,sans-serif;
+        }
+
+        .wekan-light-blue {
+            background: #2980b9;
+        }
+
+        .wekan-dark-blue {
+            background: #2573a7;
+        }
+
+        .wekan-grey {
+            background: #dedede;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<a name="home"></a>
+<div class="container-fluid wekan-dark-blue">
+    <header class="container mb-auto site-header py-1">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+                <div class="mb-3 mt-3">
+                    <a class="navbar-brand" href="/"><img src="https://wekan.github.io/wekan-logo.png" alt="WeKan ®" height="100px" border="1" />&nbsp;</a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 text-end">
+                    <a class="btn btn-link text-white" href="../">Home</a>
+                    <a class="btn btn-link text-white" href="../status/">Status</a>
+                    <a class="btn btn-link text-white" href="../docs/">Docs</a>
+                    <a class="btn btn-link text-white" aria-current="page" href="."><b>Install</b></a>
+                    <a class="btn btn-link text-white" href="../saas/">SaaS</a>
+                    <a class="btn btn-link text-white" href="../app/">App</a>  
+                    <a class="btn btn-link text-white" href="../sponsors/">Sponsors</a>
+                    <a class="btn btn-link text-white" href="../awards/">Awards</a>
+                    <a class="btn btn-link text-white" href="../success/">Success</a>
+                    <a class="btn btn-link text-white" href="../support/">Free Support</a>
+                    <a class="btn btn-link text-white" href="../commercial-support/">Commercial Support</a>
+                    <a class="btn btn-link text-white" href="../sponsor/">Sponsor</a>
+                    <a class="btn btn-link text-white" href="../privacy/">Privacy Policy</a>
+                    <a class="btn btn-link text-white" href="../cloudstatus/">WeKan Cloud Status</a>
+                    <a class="btn btn-link text-white" href="../blog/">Blog</a>
+            </div>
+        </div>
+    </header>
+</div>
+
+<a name="install"></a>
+<div class="container-fluid bg-white">
+    <div class="container px-4 py-5">
+        <h2 class="fw-bold">On-Premise: Install WeKan ® Server <span class="version-number">v7.92</span>, Meteor 2.14,
+         <a href="https://github.com/wekan/node-v14-esm/releases/tag/v14.21.4">Node.js 14.21.4</a>, MongoDB 7.0.21
+         <br /><br />
+         Newest WeKan at amd64 platforms: Windows On-Premise, Linux bundle, Snap Candidate, Docker, Kubernetes. Fixing other platforms In Progress.
+        </h2>
+        <div class="action-buttons">
+
+            <h2>FOSS backend</h2>
+
+            <h3>Standalone WeKan</h3>
+
+            <h4>Docker/VM</h4>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/UCS.md">VM +integrated IdM (UCS)</a>
+            <a class="btn btn-link" href="https://artifacthub.io/packages/helm/wekan/wekan">Kubernetes (Helm Chart)</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/issues/3874#issuecomment-867526249">Upgrading Docker</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Docker/Docker.md">Docker amd64</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/OpenShift.md">OpenShift</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/tree/main/torodb-postgresql">ToroDB PostgreSQL</a>
+            <br />
+            <br />
+
+            <h4>Snap</h4>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Snap/Install.md">Snap x64 automatic updates</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Snap/Many-Snaps-on-LXC.md">Many Snaps on LXC</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Ubuntu-Core.md">Ubuntu Core</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/Propietary/Chromebook.md">Snap Chromebook</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Snap/CentOS-7.md">CentOS 7 and RHEL7 and newer</a>
+            <br />
+            <br />
+
+            <h4>Without container/VM</h4>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Source/Raspberry-Pi.md">Bash/Service x64/arm64/s390x/ppc64el</a>
+            <a class="btn btn-link" style="color: red;" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/Propietary/Windows/Offline.md">On-Premise LAN, Windows and other CPU/OS</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/Propietary/Mac.md">Mac</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/FreeBSD.md">FreeBSD</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/SmartOS.md">SmartOS</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/Propietary/Qnap-NAS.md">Qnap NAS</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Android.md">Server for Android</a>
+            <br />
+            <br />
+
+            <h3>Sandstorm WeKan</h3>
+            <h4>Grain</h4>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Sandstorm/Sandstorm.md">Sandstorm x64</a>
+            <br />
+            <br />
+
+            <hr>
+
+            <h3>Client: Javascript enabled mobile or desktop webbrowser</h3>
+
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Features/PWA.md">Creating Mobile and Desktop App icons of your On-Premise WeKan Server</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/DragDrop/Touch-Screen-support.md">Enable All Touch Screen Support</a>
+            <a class="btn btn-link" href="https://github.com/wekan/wekan/blob/main/docs/Browsers/Browser-compatibility-matrix.md">Compatible webbrowsers</a>
+
+            <hr>
+
+            <h3>Requirements</h3>
+            Required: At least <a class="button" href="https://github.com/wekan/wekan/blob/main/docs/Backup/Backup.md">Daily Backups</a> of WeKan MongoDB database with mongodump, and settings.
+            Upcoming: <a class="button" href="https://github.com/wekan/minio-metadata">Minio and SQLite</a>.
+            Bugs, updates, users deleting list or card, harddrive full, harddrive crash etc can eat your data. There is no undo yet.
+            Only newest WeKan is supported. Please <a class="button" href="https://github.com/wekan/wekan/issues">report all new bugs immediately</a>.
+            <a class="button" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Sandstorm/Sandstorm.md">Sandstorm WeKan</a> is rarely affected by</strong>
+            any Standalone WeKan security issues. If you use Standalone WeKan on public Internet, it's better use
+            <a class="button" href="https://github.com/wekan/wekan/blob/main/docs/Platforms/FOSS/Snap/Install.md">Snap x64 automatic updates</a> and
+            restore from backup when needed, than to leave old vulnerable manually updated WeKan running.
+            <br />
+            <br />
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid wekan-dark-blue">
+    <div class="container px-4 py-5">
+        <div class="row">
+            <div class="col-12 text-white">
+                <a href="https://www.tmdn.org/tmview/#/tmview/detail/FI50202100052006A" class="text-white">Registered trademark in Finland</a>.
+                Other countries usually honor trademarks of one country.
+                <a href="https://github.com/wekan/wekan/blob/main/docs/FAQ/Hall-of-Shame.md" class="text-white">Hall of Shame of fake non-WeKan companies</a>.
+                <br /><br />
+                WeKan is MIT License (MIT)
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

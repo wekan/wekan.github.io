@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Confessions of an Open Source contributor | Wekan Blog</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="pingback" href="/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="/wp-content/themes/twentytwelve/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Wekan Blog &raquo; Feed" href="../../../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Wekan Blog &raquo; Comments Feed" href="../../../comments/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='../../../wp-content/themes/twentytwelve/fonts/font-open-sans.css?ver=20230328' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='../../../wp-content/themes/twentytwelve/style.css?ver=20240716' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='../../../wp-content/themes/twentytwelve/css/blocks.css?ver=20240603' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='/wp-content/themes/twentytwelve/css/ie.css?ver=20150214' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='../../../wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='../../../wp-json/index.html' />
+<link rel='prev' title='Golden Chance' href='../../07/golden-chance/index.html' />
+<link rel='next' title='Offline is the new normal' href='../../10/offline-is-the-new-normal/index.html' />
+<link rel="canonical" href="index.html" />
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fthis_will_be_replaced_by_sandstorm%3A10000%2F2018%2F09%2Fconfessions-of-an-open-source-contributor%2F" />
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fthis_will_be_replaced_by_sandstorm%3A10000%2F2018%2F09%2Fconfessions-of-an-open-source-contributor%2F&#038;format=xml" />
+<meta name="robots" content="index, follow"></head>
+
+<body class="post-template-default single single-post postid-249 single-format-standard custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header">
+		<hgroup>
+			<h1 class="site-title"><a href="../../../index.html" rel="home">Wekan Blog</a></h1>
+			<h2 class="site-description">Implementing kanban method</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="index.html#content">Skip to content</a>
+			<div class="nav-menu"><ul>
+<li ><a href="../../../index.html">Home</a></li></ul></div>
+		</nav><!-- #site-navigation -->
+
+				<a href="../../../index.html"><img src="../../../wp-content/uploads/2018/02/wekan-blog-header-2.png" width="940" height="198" alt="Wekan Blog" class="header-image" srcset="../../../wp-content/uploads/2018/02/wekan-blog-header-2.png 940w, ../../../wp-content/uploads/2018/02/wekan-blog-header-2-300x63.png 300w, ../../../wp-content/uploads/2018/02/wekan-blog-header-2-768x162.png 768w" sizes="(max-width: 940px) 100vw, 940px" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-249" class="post-249 post type-post status-publish format-standard hentry category-development-progress">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">Confessions of an Open Source contributor</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><span id="more-249"></span></p>
+<blockquote><p>Are you in a hurry, or should we use computer to do the work ?</p></blockquote>
+<h2>What I usually don&#8217;t spend my time with</h2>
+<p>Luckily I don&#8217;t usually install Windows and it&#8217;s updates. My friends at <a href="http://www.xet7.org/avoin">nerd club I lead</a> are trying to install Windows 10 updates to Vista age 17&#8243; laptops that have traditional harddisk (not SSD) and there is no budget yet to change to SSD. Updates takes many days, if they happen to work at all. Those laptops should be used at some courses to teach students. I don&#8217;t know why they can&#8217;t use Linux in that teaching.</p>
+<h2>Some months ago: Server debugging</h2>
+<p>Some months ago I had some crash/reboot problems with Wekan <a href="https://wekan.github.io/blog/2018/01/wekan-progress-on-x64-and-arm/index.html">donated servers</a>. After spending a lot of time debugging with support, the reason for crashing was that I did run LXDE desktop and VirtualBox on server, and they fight for some limited resources on server. I also was able to duplicate this same behaviour on my laptop. I was using x2go to connect to that desktop. The solution to that was that I would remove LXDE desktop and VirtualBox, and use libvirt-based virt-manager GUI desktop client. With it I can connect with remote desktop VNC to server though ssh connection to see VMs that are running at server.</p>
+<p><img class="aligncenter size-full wp-image-253" src="../../../wp-content/uploads/2018/09/virt-manager.png" alt="" width="1631" height="1164" srcset="../../../wp-content/uploads/2018/09/virt-manager.png 1631w, ../../../wp-content/uploads/2018/09/virt-manager-300x214.png 300w, ../../../wp-content/uploads/2018/09/virt-manager-768x548.png 768w, ../../../wp-content/uploads/2018/09/virt-manager-1024x731.png 1024w, ../../../wp-content/uploads/2018/09/virt-manager-168x120.png 168w" sizes="(max-width: 1631px) 100vw, 1631px" /></p>
+<p>I have not yet figured out how to build VirtualBox .ova files on the server yet, because I did not get VirtualBox running inside KVM/QEMU. Probably I would need to use <a href="https://packer.io">https://packer.io</a> or some other tool.</p>
+<h2>Building Snap packages on my laptop</h2>
+<p>Once upon time, snap build servers had bug so builds failed, and snapcraft had bug that had a fix at repo that was not yet released, so <a href="https://github.com/wekan/wekan-snap/issues/58">I figured out how to install snapcraft from source</a> and build snap packages on my laptop. Those bugs have been fixed some time ago.</p>
+<h2>Answering GitHub issues</h2>
+<p>I do get email from every new GitHub issue and comment. I do like it, because my email filters organize incoming email neatly. Sometime there has been talk about making a bot that answers general questions, but there has not been so much duplicate questions yet. It&#8217;s very nice when also other Wekan contributors answer GitHub issues and send pull requests.</p>
+<p><img class="size-full wp-image-263 alignright" src="../../../wp-content/uploads/2018/09/chainsaw-work2.jpg" alt="" width="200" height="356" srcset="../../../wp-content/uploads/2018/09/chainsaw-work2.jpg 200w, ../../../wp-content/uploads/2018/09/chainsaw-work2-169x300.jpg 169w, ../../../wp-content/uploads/2018/09/chainsaw-work2-67x120.jpg 67w" sizes="(max-width: 200px) 100vw, 200px" /></p>
+<h2>Day-to-day life, when there is no code related progress</h2>
+<ul>
+<li>Some days it seems that coffee does not help enough to wake up, and I find it hard to concentrate. So then I need to sleep around the clock. This happens sometimes when I have been programming whole previous day intensively, or have walked a lot around the city at previous day.</li>
+<li>Shopping food etc too often take a whole day.</li>
+<li>Helping relatives and friends takes many days.</li>
+<li>Cleaning up often takes a whole day.</li>
+<li>I do like to listen singing of birds, days when sun is shining, days when it rains. Although, some days there is sound of chainsaw as can be seen from photo taken today &#8211; yes they did finally get permission to cut the trees at city where I live. Well, a year ago <span id="result_box" class="" lang="en" tabindex="-1">someone cut a iron bar at the parking lot with a circular saw, that was also nice.</span></li>
+</ul>
+<h2>Customer work</h2>
+<p>All of the above did slow down customer work, so I&#8217;m late in a project. I do already see that limiting original scope of project has helped to make schedule more realistic. Customer said to me, that because I have so much experience, I will figure it out. Because customer is so friendly and encouraging, I do my best to implement everything.</p>
+<h2>Day-to-day life, when I&#8217;m very productive</h2>
+<p>I have done remote work at home for many years. At some very productive day I did 7 releases of Wekan. At some other day I got one whole feature mostly done, &#8220;No comments&#8221; permission. Someone at chat commented that it would be very hard to do QA at that speed, wondering am I more of machine than human.</p>
+<p>For me, there are still too many manual steps in the release process.</p>
+<h2>What my life would look like if I had full time work at office</h2>
+<p>At morning, I would spend time at traffic to I would go to early to office. Work there at office the whole day, at breaks drink <a href="https://queal.com/en/">Queal</a> at office, and then go home, very tired. Shared office spaces are the worst, and it&#8217;s hard to concentrate with all the extra noise. Someone would ask something about unrelated work, so I would have to start debugging from the very beginning again. After work I would spend time at traffic to travel to home, and be very tired. Most likely I would not have enough time to rest and recover before next workday. Yes, I have done this for some days, when visiting company office, and staying at hotel.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="../../../category/development-progress/index.html" rel="category tag">Development Progress</a> on <a href="index.html" title="19:23" rel="bookmark"><time class="entry-date" datetime="2018-09-15T19:23:02+00:00">2018-09-15</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="../../../author/9290707ac9677a901ffa675675b58357/index.html" title="View all posts by Lauri Ojansivu" rel="author">Lauri Ojansivu</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="../../07/golden-chance/index.html" rel="prev"><span class="meta-nav">&larr;</span> Golden Chance</a></span>
+					<span class="nav-next"><a href="../../10/offline-is-the-new-normal/index.html" rel="next">Offline is the new normal <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+	
+</div><!-- #comments .comments-area -->
+
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+					<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="../../../2023/01/foss-levels-up-everyone/index.html">FOSS levels up everyone</a>
+									</li>
+											<li>
+					<a href="../../../2020/06/maximum-transparency/index.html">Maximum transparency</a>
+									</li>
+											<li>
+					<a href="../../../2020/06/results-of-wekan-survey-2020-01/index.html">Results of Wekan Survey 2020-01</a>
+									</li>
+											<li>
+					<a href="../../../2019/09/illusion-of-differences-between-operating-systems-programming-languages-and-web-frameworks/index.html">Illusion of differences between Operating Systems, Programming Languages and Web Frameworks</a>
+									</li>
+											<li>
+					<a href="../../../2019/06/wekan-on-raspi3-and-arm64-server-now-works-and-whats-next-with-cncf/index.html">Wekan on RasPi3 and arm64 server now works, and what&#8217;s next with CNCF</a>
+									</li>
+					</ul>
+		</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href='../../../2023/01/index.html'>January 2023</a></li>
+	<li><a href='../../../2020/06/index.html'>June 2020</a></li>
+	<li><a href='../../../2019/09/index.html'>September 2019</a></li>
+	<li><a href='../../../2019/06/index.html'>June 2019</a></li>
+	<li><a href='../../../2019/04/index.html'>April 2019</a></li>
+	<li><a href='../../../2019/01/index.html'>January 2019</a></li>
+	<li><a href='../../11/index.html'>November 2018</a></li>
+	<li><a href='../../10/index.html'>October 2018</a></li>
+	<li><a href='../index.html'>September 2018</a></li>
+	<li><a href='../../07/index.html'>July 2018</a></li>
+	<li><a href='../../05/index.html'>May 2018</a></li>
+	<li><a href='../../02/index.html'>February 2018</a></li>
+	<li><a href='../../01/index.html'>January 2018</a></li>
+	<li><a href='../../../2017/12/index.html'>December 2017</a></li>
+		</ul>
+		</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='../../../wp-content/themes/twentytwelve/js/navigation.js?ver=20141205'></script>
+<script type='text/javascript' src='../../../wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <title>WeKan Cloud Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrape framework -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+
+    <!-- Use same styles as Wekan board -->
+    <style>
+        body {
+            font: 16px Roboto,Poppins,Helvetica Neue,Arial,Helvetica,sans-serif;
+            background: #dedede;
+        }
+
+        p {
+            font: 14px Roboto,Poppins,Helvetica Neue,Arial,Helvetica,sans-serif;
+        }
+
+        .wekan-light-blue {
+            background: #2980b9;
+        }
+
+        .wekan-dark-blue {
+            background: #2573a7;
+        }
+
+        .wekan-grey {
+            background: #dedede;
+        }
+    </style>
+
+</head>
+<body>
+    <a name="home"></a>
+    <div class="container-fluid wekan-dark-blue">
+        <header class="container mb-auto site-header py-1">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="mb-3 mt-3">
+                        <a class="navbar-brand" href="/"><img src="../wekan-logo.png" alt="WeKan ®" height="100px" border="1" />&nbsp;</a>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-sm-12 text-end">
+                    <a class="btn btn-link text-white" href="../">Home</a>
+                    <a class="btn btn-link text-white" href="../status/">Status</a>
+                    <a class="btn btn-link text-white" href="../docs/">Docs</a>
+                    <a class="btn btn-link text-white" href="../install/">Install</a>
+                    <a class="btn btn-link text-white" href="../saas/">SaaS</a>
+                    <a class="btn btn-link text-white" href="../app/">App</a>
+                    <a class="btn btn-link text-white" href="../sponsors/">Sponsors</a>
+                    <a class="btn btn-link text-white" href="../awards/">Awards</a>
+                    <a class="btn btn-link text-white" href="../success/">Success</a>
+                    <a class="btn btn-link text-white" href="../support/">Free Support</a>
+                    <a class="btn btn-link text-white" href="../commercial-support/">Commercial Support</a>
+                    <a class="btn btn-link text-white" href="../sponsor/">Sponsor</a>
+                    <a class="btn btn-link text-white" href="../privacy/">Privacy Policy</a>
+                    <a class="btn btn-link text-white" aria-current="page" href="."><b>WeKan Cloud Status</b></a>
+                    <a class="btn btn-link text-white" href="../blog/">Blog</a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div class="container-fluid bg-white">
+        <div class="container px-4 py-5">
+
+            <h1>WeKan Cloud Status</h1>
+
+            <h3>2024-11-25</h3>
+            <ul>
+              <li>At morning, SaaS hosting was moved to different server, because there was notification
+                  that there will be 6 hours downtime at network of server where hosting
+                  was previously, because they are making some changes to improve network quality.
+                  Moving had minimal downtime.
+              <li>Later at evening, there was some downtime.</li>
+              <li>8.15pm GMT+2: Fixing done, all services back online.</li>
+              <li>Root cause:</li>
+              <li>1) For Snap, reboot of server made them work.</li>
+              <li>2) For RocketChat, lxc containers did not have any network connectivity. Fix was these commands
+                  from this webpage: <a href="https://discuss.linuxcontainers.org/t/containers-do-not-have-outgoing-internet-access/10844/3">
+                  https://discuss.linuxcontainers.org/t/containers-do-not-have-outgoing-internet-access/10844/3</a></li>
+           </ul>
+<pre>
+for ipt in iptables iptables-legacy ip6tables ip6tables-legacy; do $ipt --flush; $ipt --flush -t nat; $ipt --delete-chain; $ipt --delete-chain -t nat; $ipt -P FORWARD ACCEPT; $ipt -P INPUT ACCEPT; $ipt -P OUTPUT ACCEPT; done
+
+systemctl reload snap.lxd.daemon
+
+</pre>
+
+            <h3>2024-10-16</h3>
+            <ul>
+              <li>10.04pm GMT+3: Adding new WeKan hosting customer. Some downtime.</li>
+              <li>2.18am 2024-10-17 GMT+3: All hosting services online</li>
+              <li>Root cause: To get new custom domain kanban.somecompany.com
+                  CNAME TLS cert, had to disable and remove Origin Cert
+                  from CloudFlare, so that Caddy can get Let's Encrypt cert.
+                  Changed Sandstorm domain because it works with
+                  CloudFlare wildcard Origin cert. Had to also reboot router and
+                  server, to get all working.</li>
+            </ul>
+
+            <h3>2024-10-05</h3>
+            <ul>
+              <li>4.00pm GMT+3: SSL/TLS errors at some hosting services.</li>
+              <li>4.30pm GMT+3: Fixing done, all services back online.</li>
+              <li>Root cause: Had to restart router, it was stuck.</li>
+            </ul>
+
+            <h3>2024-09-23</h3>
+            <ul>
+              <li>4.00pm GMT+3: SSL/TLS errors at some hosting services.</li>
+              <li>4.30pm GMT+3: Fixing done, all services back online.</li>
+              <li>General info: Any WeKan hosting uses custom domain CNAME record (at customer nameserver).</li>
+              <li>Root cause: Getting Let's Encrypt TLS cert did not work with CNAME record (at customer nameserver)
+                  to CNAME record (at WeKan hosting nameserver), it required CNAME record (at customer nameserver) to
+                  A record (at WeKan hosting nameserver) to IP address.</li>
+            </ul>
+
+            <h3>2024-05-21</h3>
+            <ul>
+              <li>2024-05-21: SSL/TLS issues at many hosting services.</li>
+              <li>Notes: <a href="https://github.com/wekan/wekan/issues/5415">https://github.com/wekan/wekan/issues/5415</a></li>
+              <li>2024-05-22: Fixing done, all services back online.</li>
+              <li>Root cause: CloudFlare changed their SSL/TLS features, had to find correct working settings by trial and error.</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="container-fluid wekan-dark-blue">
+        <div class="container px-4 py-5">
+            <div class="row">
+                <div class="col-12 text-white">
+                    <a href="https://www.tmdn.org/tmview/#/tmview/detail/FI50202100052006A" class="text-white">Registered trademark in Finland</a>.
+                    Other countries usually honor trademarks of one country.
+                    <br /><br />
+                    <small>&copy; WeKan</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
